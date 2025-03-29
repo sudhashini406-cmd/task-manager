@@ -1,0 +1,1 @@
+import{P as o}from"./GetMembers-CUvba0q7.js";import"react/jsx-runtime";import"@tanstack/react-query";import"@tanstack/react-router";import"react";import"@tanstack/react-table";import"js-cookie";const s=o;export{s as component};

@@ -1,0 +1,29 @@
+import { jsxs, jsx } from 'react/jsx-runtime';
+import { useNavigate } from '@tanstack/react-router';
+import { useMutation } from '@tanstack/react-query';
+import { useForm } from 'react-hook-form';
+import { useState } from 'react';
+import N from 'js-cookie';
+import { Eye, EyeOff } from 'lucide-react';
+
+function P({ onClose: p, onUserAdded: h }) {
+  const o = useNavigate(), { register: n, handleSubmit: b, watch: f, formState: { errors: t } } = useForm(), [i, g] = useState(false), [d, m] = useState(false);
+  f("password", "");
+  const N$1 = useMutation({ mutationFn: async (a) => {
+    m(true);
+    const x = `Bearer ${N.get("access_token")}`, r = await fetch("https://dev-api-tm.labsquire.com/v3.0/users/add", { method: "POST", headers: { "Content-Type": "application/json", Authorization: x }, body: JSON.stringify(a) });
+    if (!r.ok) {
+      let l = "Something went wrong!";
+      throw r.status === 401 && (l = "Unauthorized: Invalid or missing authentication token."), r.status === 404 && (l = "API endpoint not found (404). Please check the URL."), r.status === 422 && (l = (await r.json()).message || "Invalid input data (422). Please check your form."), r.status === 409 && (l = (await r.json()).message || "Conflict (409): The data already exists."), new Error(l);
+    }
+    return r.json();
+  }, onSuccess: async (a) => {
+    const c = { id: a.id, firstName: a.fname, lastName: a.lname, email: a.email, designation: a.designation, mobile: a.phone_number, type: a.user_type };
+    p(), h(c);
+  }, onSettled: () => m(false) });
+  return jsxs("div", { className: "fixed inset-0 bg-orange bg-opacity-10 backdrop-blur-sm z-50 flex", children: [jsx("div", { className: "flex-1" }), jsxs("div", { className: "bg-white w-96 h-full p-6 rounded-l-lg shadow-lg relative fixed right-0 top-0", children: [jsx("h2", { className: "text-lg font-bold mb-4", children: "Add User" }), jsx("button", { className: "absolute top-2 right-2 text-gray-500 hover:text-gray-700", onClick: () => o({ to: "/users/user-table" }), children: "\u2716" }), jsxs("form", { onSubmit: b((a) => N$1.mutate(a)), className: "space-y-4", children: [jsxs("div", { children: [jsxs("label", { className: "font-bold", children: ["First Name", jsx("span", { className: "text-red-500", children: "*" })] }), jsx("input", { type: "text", placeholder: "Enter First Name", ...n("fname", { required: "First Name Invalid", minLength: { value: 3, message: "At least 3 characters required" } }), className: "w-full p-2 border rounded" }), t.fname && jsx("p", { className: "text-red-500 text-sm", children: t.fname.message })] }), jsxs("div", { children: [jsxs("label", { className: "font-bold", children: ["Last Name", jsx("span", { className: "text-red-500", children: "*" })] }), jsx("input", { type: "text", placeholder: "Enter Last Name", ...n("lname", { required: "Last Name is required" }), className: "w-full p-2 border rounded" }), t.lname && jsx("p", { className: "text-red-500 text-sm", children: t.lname.message })] }), jsxs("div", { children: [jsx("label", { className: "font-bold", children: "Mobile Number" }), jsx("input", { type: "text", placeholder: "Enter Phone Number", ...n("phone_number", { required: "Mobile number is required", pattern: { value: /^\d{10}$/, message: "Enter a valid 10-digit mobile number" } }), maxLength: 10, className: "w-full p-2 border rounded" }), t.phone_number && jsx("p", { className: "text-red-500 text-sm", children: t.phone_number.message })] }), jsxs("div", { children: [jsxs("label", { className: "font-bold", children: ["Email", jsx("span", { className: "text-red-500", children: "*" })] }), jsx("input", { type: "email", placeholder: "Enter Email", ...n("email", { required: "Email is required", pattern: { value: /^\S+@\S+\.\S+$/, message: "Invalid email format" } }), className: "w-full p-2 border rounded" }), t.email && jsx("p", { className: "text-red-500 text-sm", children: t.email.message })] }), jsxs("div", { children: [jsxs("label", { className: "font-bold", children: ["Password", jsx("span", { className: "text-red-500", children: "*" })] }), jsxs("div", { className: "relative", children: [jsx("input", { type: i ? "text" : "password", placeholder: "Enter Password", ...n("password", { required: "Password is required", minLength: { value: 8, message: "Must be at least 8 characters" } }), className: "w-full p-2 border rounded" }), jsx("button", { type: "button", onClick: () => g(!i), className: "absolute right-3 top-3 text-gray-500", children: i ? jsx(Eye, {}) : jsx(EyeOff, {}) })] }), t.password && jsx("p", { className: "text-red-500 text-sm", children: t.password.message })] }), jsxs("div", { children: [jsx("label", { className: "font-bold", children: "Designation" }), jsx("input", { type: "text", placeholder: "Enter Designation", ...n("designation"), className: "w-full p-2 border rounded" })] }), jsxs("div", { children: [jsxs("label", { className: "font-bold", children: ["User Type", jsx("span", { className: "text-red-500", children: "*" })] }), jsxs("select", { ...n("user_type", { required: "User Type is required" }), className: "w-full p-2 border rounded", children: [jsx("option", { value: "", children: "Select" }), jsx("option", { value: "user", children: "User" }), jsx("option", { value: "admin", children: "Admin" })] }), t.user_type && jsx("p", { className: "text-red-500 text-sm", children: t.user_type.message })] }), jsxs("div", { className: "flex justify-between mt-4", children: [jsx("button", { type: "button", onClick: () => o({ to: "/users/user-table" }), className: "bg-gray-300 px-4 py-2 rounded", children: "Cancel" }), jsx("button", { type: "submit", className: "bg-green-500 text-white px-4 py-2 rounded", disabled: d, children: d ? "Adding..." : "Add User" })] })] })] })] });
+}
+const D = P;
+
+export { D as component };
+//# sourceMappingURL=add-user-CoMOtsqu.mjs.map
