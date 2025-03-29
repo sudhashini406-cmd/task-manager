@@ -4217,7 +4217,7 @@ async function errorHandler(error, event) {
 }
 
 const appConfig = {"name":"vinxi","routers":[{"name":"public","type":"static","dir":"./public","base":"/","root":"C:\\Users\\sudhashini_enugula\\Desktop\\ProjectLabsquire18","order":0,"outDir":"C:/Users/sudhashini_enugula/Desktop/ProjectLabsquire18/.vinxi/build/public"},{"name":"client","type":"client","target":"browser","handler":"app/client.tsx","base":"/_build","build":{"sourcemap":true},"root":"C:\\Users\\sudhashini_enugula\\Desktop\\ProjectLabsquire18","outDir":"C:/Users/sudhashini_enugula/Desktop/ProjectLabsquire18/.vinxi/build/client","order":1},{"name":"ssr","type":"http","target":"server","handler":"app/ssr.tsx","link":{"client":"client"},"root":"C:\\Users\\sudhashini_enugula\\Desktop\\ProjectLabsquire18","base":"/","outDir":"C:/Users/sudhashini_enugula/Desktop/ProjectLabsquire18/.vinxi/build/ssr","order":2},{"name":"server","type":"http","target":"server","base":"/_server","handler":"node_modules/@tanstack/start-server-functions-handler/dist/esm/index.js","root":"C:\\Users\\sudhashini_enugula\\Desktop\\ProjectLabsquire18","outDir":"C:/Users/sudhashini_enugula/Desktop/ProjectLabsquire18/.vinxi/build/server","order":3}],"server":{"preset":"node-server","experimental":{"asyncContext":true}},"root":"C:\\Users\\sudhashini_enugula\\Desktop\\ProjectLabsquire18"};
-				const buildManifest = {"client":{"C:/Users/sudhashini_enugula/Desktop/ProjectLabsquire18/app/styles/app.css":{"file":"assets/app-Dk303kxR.css","src":"C:/Users/sudhashini_enugula/Desktop/ProjectLabsquire18/app/styles/app.css"},"_EditUserForm-CG3GExWL.js":{"file":"assets/EditUserForm-CG3GExWL.js","name":"EditUserForm","imports":["_client-CEzPjcs2.js","_useMutation-Cm7FsQBV.js","_js.cookie-Cz0CWeBA.js"]},"_ExportCsv-Cxm1M38I.js":{"file":"assets/ExportCsv-Cxm1M38I.js","name":"ExportCsv"},"_GetMembers-B30HNYHZ.js":{"file":"assets/GetMembers-B30HNYHZ.js","name":"GetMembers","imports":["_client-CEzPjcs2.js","_useQuery-BenxNObl.js","_useMutation-Cm7FsQBV.js","_index-Bq7RBMIA.js","_js.cookie-Cz0CWeBA.js"]},"_SignIn-Jg-6cYNj.js":{"file":"assets/SignIn-Jg-6cYNj.js","name":"SignIn","imports":["_client-CEzPjcs2.js","_useMutation-Cm7FsQBV.js","_index.esm-DuzvGBt5.js","_js.cookie-Cz0CWeBA.js","_createLucideIcon-xFbQuUs1.js","_lock-keyhole-DqYgRwkb.js","_eye-VGLHSxm1.js"]},"_arrow-left-DtyFfLUa.js":{"file":"assets/arrow-left-DtyFfLUa.js","name":"arrow-left","imports":["_createLucideIcon-xFbQuUs1.js"]},"_client-CEzPjcs2.js":{"file":"assets/client-CEzPjcs2.js","name":"client","dynamicImports":["app/routes/sign-in.tsx?tsr-split=component","app/routes/reset-password.tsx?tsr-split=component","app/routes/forgot-password.tsx?tsr-split=component","app/routes/_labsquire.tsx?tsr-split=component","app/routes/index.tsx?tsr-split=component","app/routes/_labsquire/update-password.tsx?tsr-split=component","app/routes/_labsquire/get-profile.tsx?tsr-split=component","app/routes/_labsquire/users/user-table.tsx?tsr-split=component","app/routes/_labsquire/users/edit-user-form.tsx?tsr-split=component","app/routes/_labsquire/users/add-user.tsx?tsr-split=component","app/routes/_labsquire/tasks/get-task-stats.tsx?tsr-split=component","app/routes/_labsquire/tasks/add-tasks.tsx?tsr-split=component","app/routes/_labsquire/projects/project-table.tsx?tsr-split=component","app/routes/_labsquire/projects/get-single-project/add-project.tsx?tsr-split=component","app/routes/_labsquire/projects/get-single-project/$projectId/index.tsx?tsr-split=component","app/routes/_labsquire/projects/get-members/$projectId/index1.tsx?tsr-split=component"],"assets":["assets/app-Dk303kxR.css"]},"_createLucideIcon-xFbQuUs1.js":{"file":"assets/createLucideIcon-xFbQuUs1.js","name":"createLucideIcon","imports":["_client-CEzPjcs2.js"]},"_eye-VGLHSxm1.js":{"file":"assets/eye-VGLHSxm1.js","name":"eye","imports":["_createLucideIcon-xFbQuUs1.js"]},"_index-Bq7RBMIA.js":{"file":"assets/index-Bq7RBMIA.js","name":"index","imports":["_client-CEzPjcs2.js"]},"_index.esm-DuzvGBt5.js":{"file":"assets/index.esm-DuzvGBt5.js","name":"index.esm","imports":["_client-CEzPjcs2.js"]},"_js.cookie-Cz0CWeBA.js":{"file":"assets/js.cookie-Cz0CWeBA.js","name":"js.cookie"},"_lock-keyhole-DqYgRwkb.js":{"file":"assets/lock-keyhole-DqYgRwkb.js","name":"lock-keyhole","imports":["_createLucideIcon-xFbQuUs1.js"]},"_useMutation-Cm7FsQBV.js":{"file":"assets/useMutation-Cm7FsQBV.js","name":"useMutation","imports":["_client-CEzPjcs2.js","_utils-km2FGkQ4.js"]},"_useQuery-BenxNObl.js":{"file":"assets/useQuery-BenxNObl.js","name":"useQuery","imports":["_client-CEzPjcs2.js","_utils-km2FGkQ4.js"]},"_utils-km2FGkQ4.js":{"file":"assets/utils-km2FGkQ4.js","name":"utils"},"app/routes/_labsquire.tsx?tsr-split=component":{"file":"assets/_labsquire-Cx60mLnY.js","name":"_labsquire","src":"app/routes/_labsquire.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-CEzPjcs2.js","_createLucideIcon-xFbQuUs1.js"]},"app/routes/_labsquire/get-profile.tsx?tsr-split=component":{"file":"assets/get-profile-DK97tu8l.js","name":"get-profile","src":"app/routes/_labsquire/get-profile.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-CEzPjcs2.js","_useQuery-BenxNObl.js","_useMutation-Cm7FsQBV.js","_js.cookie-Cz0CWeBA.js","_createLucideIcon-xFbQuUs1.js","_arrow-left-DtyFfLUa.js","_utils-km2FGkQ4.js"],"css":["assets/get-profile-GNLSjkBZ.css"]},"app/routes/_labsquire/projects/get-members/$projectId/index1.tsx?tsr-split=component":{"file":"assets/index1-B7LLhx9z.js","name":"index1","src":"app/routes/_labsquire/projects/get-members/$projectId/index1.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_GetMembers-B30HNYHZ.js","_client-CEzPjcs2.js","_useQuery-BenxNObl.js","_utils-km2FGkQ4.js","_useMutation-Cm7FsQBV.js","_index-Bq7RBMIA.js","_js.cookie-Cz0CWeBA.js"]},"app/routes/_labsquire/projects/get-single-project/$projectId/index.tsx?tsr-split=component":{"file":"assets/index-BRBTVs4n.js","name":"index","src":"app/routes/_labsquire/projects/get-single-project/$projectId/index.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-CEzPjcs2.js","_useQuery-BenxNObl.js","_useMutation-Cm7FsQBV.js","_js.cookie-Cz0CWeBA.js","_GetMembers-B30HNYHZ.js","_index-Bq7RBMIA.js","_utils-km2FGkQ4.js"]},"app/routes/_labsquire/projects/get-single-project/add-project.tsx?tsr-split=component":{"file":"assets/add-project-CKqL5EJa.js","name":"add-project","src":"app/routes/_labsquire/projects/get-single-project/add-project.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-CEzPjcs2.js","_useMutation-Cm7FsQBV.js","_js.cookie-Cz0CWeBA.js","_utils-km2FGkQ4.js"]},"app/routes/_labsquire/projects/project-table.tsx?tsr-split=component":{"file":"assets/project-table-DCdBQmF9.js","name":"project-table","src":"app/routes/_labsquire/projects/project-table.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-CEzPjcs2.js","_useQuery-BenxNObl.js","_js.cookie-Cz0CWeBA.js","_ExportCsv-Cxm1M38I.js","_utils-km2FGkQ4.js"]},"app/routes/_labsquire/tasks/add-tasks.tsx?tsr-split=component":{"file":"assets/add-tasks-CcAyF7fC.js","name":"add-tasks","src":"app/routes/_labsquire/tasks/add-tasks.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-CEzPjcs2.js","_useQuery-BenxNObl.js","_useMutation-Cm7FsQBV.js","_js.cookie-Cz0CWeBA.js","_utils-km2FGkQ4.js"]},"app/routes/_labsquire/tasks/get-task-stats.tsx?tsr-split=component":{"file":"assets/get-task-stats-BwjK4C4f.js","name":"get-task-stats","src":"app/routes/_labsquire/tasks/get-task-stats.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-CEzPjcs2.js","_useQuery-BenxNObl.js","_js.cookie-Cz0CWeBA.js","_utils-km2FGkQ4.js"]},"app/routes/_labsquire/update-password.tsx?tsr-split=component":{"file":"assets/update-password-rcT6NG_a.js","name":"update-password","src":"app/routes/_labsquire/update-password.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-CEzPjcs2.js","_useMutation-Cm7FsQBV.js","_js.cookie-Cz0CWeBA.js","_eye-VGLHSxm1.js","_arrow-left-DtyFfLUa.js","_utils-km2FGkQ4.js","_createLucideIcon-xFbQuUs1.js"]},"app/routes/_labsquire/users/add-user.tsx?tsr-split=component":{"file":"assets/add-user-CEcNkoJo.js","name":"add-user","src":"app/routes/_labsquire/users/add-user.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-CEzPjcs2.js","_useMutation-Cm7FsQBV.js","_index.esm-DuzvGBt5.js","_js.cookie-Cz0CWeBA.js","_eye-VGLHSxm1.js","_utils-km2FGkQ4.js","_createLucideIcon-xFbQuUs1.js"]},"app/routes/_labsquire/users/edit-user-form.tsx?tsr-split=component":{"file":"assets/edit-user-form-Cdgsygsc.js","name":"edit-user-form","src":"app/routes/_labsquire/users/edit-user-form.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_EditUserForm-CG3GExWL.js","_client-CEzPjcs2.js","_useMutation-Cm7FsQBV.js","_utils-km2FGkQ4.js","_js.cookie-Cz0CWeBA.js"]},"app/routes/_labsquire/users/user-table.tsx?tsr-split=component":{"file":"assets/user-table-iQx8TZrj.js","name":"user-table","src":"app/routes/_labsquire/users/user-table.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-CEzPjcs2.js","_useQuery-BenxNObl.js","_js.cookie-Cz0CWeBA.js","_index-Bq7RBMIA.js","_EditUserForm-CG3GExWL.js","_ExportCsv-Cxm1M38I.js","_utils-km2FGkQ4.js","_useMutation-Cm7FsQBV.js"]},"app/routes/forgot-password.tsx?tsr-split=component":{"file":"assets/forgot-password-Br919E7Z.js","name":"forgot-password","src":"app/routes/forgot-password.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-CEzPjcs2.js","_useMutation-Cm7FsQBV.js","_index.esm-DuzvGBt5.js","_utils-km2FGkQ4.js"]},"app/routes/index.tsx?tsr-split=component":{"file":"assets/index-CE5iwYe2.js","name":"index","src":"app/routes/index.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-CEzPjcs2.js","_SignIn-Jg-6cYNj.js","_useMutation-Cm7FsQBV.js","_utils-km2FGkQ4.js","_index.esm-DuzvGBt5.js","_js.cookie-Cz0CWeBA.js","_createLucideIcon-xFbQuUs1.js","_lock-keyhole-DqYgRwkb.js","_eye-VGLHSxm1.js"]},"app/routes/reset-password.tsx?tsr-split=component":{"file":"assets/reset-password-Dbv_EY50.js","name":"reset-password","src":"app/routes/reset-password.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-CEzPjcs2.js","_useMutation-Cm7FsQBV.js","_lock-keyhole-DqYgRwkb.js","_eye-VGLHSxm1.js","_utils-km2FGkQ4.js","_createLucideIcon-xFbQuUs1.js"]},"app/routes/sign-in.tsx?tsr-split=component":{"file":"assets/sign-in-BRJAJLio.js","name":"sign-in","src":"app/routes/sign-in.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_SignIn-Jg-6cYNj.js","_client-CEzPjcs2.js","_useMutation-Cm7FsQBV.js","_utils-km2FGkQ4.js","_index.esm-DuzvGBt5.js","_js.cookie-Cz0CWeBA.js","_createLucideIcon-xFbQuUs1.js","_lock-keyhole-DqYgRwkb.js","_eye-VGLHSxm1.js"]},"virtual:$vinxi/handler/client":{"file":"assets/client-Ci9HFxcd.js","name":"client","src":"virtual:$vinxi/handler/client","isEntry":true,"imports":["_client-CEzPjcs2.js"]}},"ssr":{"C:/Users/sudhashini_enugula/Desktop/ProjectLabsquire18/app/styles/app.css":{"file":"assets/app-Dk303kxR.css","src":"C:/Users/sudhashini_enugula/Desktop/ProjectLabsquire18/app/styles/app.css"},"_EditUserForm-BVyw8kU9.js":{"file":"assets/EditUserForm-BVyw8kU9.js","name":"EditUserForm"},"_ExportCsv-Cxm1M38I.js":{"file":"assets/ExportCsv-Cxm1M38I.js","name":"ExportCsv"},"_GetMembers-CUvba0q7.js":{"file":"assets/GetMembers-CUvba0q7.js","name":"GetMembers"},"_SignIn-C0fgN4Ub.js":{"file":"assets/SignIn-C0fgN4Ub.js","name":"SignIn"},"app/routes/_labsquire.tsx?tsr-split=component":{"file":"assets/_labsquire-BspXxI4i.js","name":"_labsquire","src":"app/routes/_labsquire.tsx?tsr-split=component","isDynamicEntry":true},"app/routes/_labsquire/get-profile.tsx?tsr-split=component":{"file":"assets/get-profile-CwZG9TIE.js","name":"get-profile","src":"app/routes/_labsquire/get-profile.tsx?tsr-split=component","isDynamicEntry":true,"css":["assets/get-profile-GNLSjkBZ.css"]},"app/routes/_labsquire/projects/get-members/$projectId/index1.tsx?tsr-split=component":{"file":"assets/index1-BEfLdtsF.js","name":"index1","src":"app/routes/_labsquire/projects/get-members/$projectId/index1.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_GetMembers-CUvba0q7.js"]},"app/routes/_labsquire/projects/get-single-project/$projectId/index.tsx?tsr-split=component":{"file":"assets/index-WJ_8OdWR.js","name":"index","src":"app/routes/_labsquire/projects/get-single-project/$projectId/index.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_GetMembers-CUvba0q7.js"]},"app/routes/_labsquire/projects/get-single-project/add-project.tsx?tsr-split=component":{"file":"assets/add-project-NeOJyKaG.js","name":"add-project","src":"app/routes/_labsquire/projects/get-single-project/add-project.tsx?tsr-split=component","isDynamicEntry":true},"app/routes/_labsquire/projects/project-table.tsx?tsr-split=component":{"file":"assets/project-table-CvcOygil.js","name":"project-table","src":"app/routes/_labsquire/projects/project-table.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_ExportCsv-Cxm1M38I.js"]},"app/routes/_labsquire/tasks/add-tasks.tsx?tsr-split=component":{"file":"assets/add-tasks-DOzKJXMr.js","name":"add-tasks","src":"app/routes/_labsquire/tasks/add-tasks.tsx?tsr-split=component","isDynamicEntry":true},"app/routes/_labsquire/tasks/get-task-stats.tsx?tsr-split=component":{"file":"assets/get-task-stats-CCPbpruE.js","name":"get-task-stats","src":"app/routes/_labsquire/tasks/get-task-stats.tsx?tsr-split=component","isDynamicEntry":true},"app/routes/_labsquire/update-password.tsx?tsr-split=component":{"file":"assets/update-password-CT9TQj3Z.js","name":"update-password","src":"app/routes/_labsquire/update-password.tsx?tsr-split=component","isDynamicEntry":true},"app/routes/_labsquire/users/add-user.tsx?tsr-split=component":{"file":"assets/add-user-CoMOtsqu.js","name":"add-user","src":"app/routes/_labsquire/users/add-user.tsx?tsr-split=component","isDynamicEntry":true},"app/routes/_labsquire/users/edit-user-form.tsx?tsr-split=component":{"file":"assets/edit-user-form-qW1JUAKi.js","name":"edit-user-form","src":"app/routes/_labsquire/users/edit-user-form.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_EditUserForm-BVyw8kU9.js"]},"app/routes/_labsquire/users/user-table.tsx?tsr-split=component":{"file":"assets/user-table-Dr3moyOM.js","name":"user-table","src":"app/routes/_labsquire/users/user-table.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_EditUserForm-BVyw8kU9.js","_ExportCsv-Cxm1M38I.js"]},"app/routes/forgot-password.tsx?tsr-split=component":{"file":"assets/forgot-password-CgVQ0AZo.js","name":"forgot-password","src":"app/routes/forgot-password.tsx?tsr-split=component","isDynamicEntry":true},"app/routes/index.tsx?tsr-split=component":{"file":"assets/index-CdMbw2w4.js","name":"index","src":"app/routes/index.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_SignIn-C0fgN4Ub.js"]},"app/routes/reset-password.tsx?tsr-split=component":{"file":"assets/reset-password-NE-D3iDd.js","name":"reset-password","src":"app/routes/reset-password.tsx?tsr-split=component","isDynamicEntry":true},"app/routes/sign-in.tsx?tsr-split=component":{"file":"assets/sign-in-DObYVqdW.js","name":"sign-in","src":"app/routes/sign-in.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_SignIn-C0fgN4Ub.js"]},"virtual:$vinxi/handler/ssr":{"file":"ssr.js","name":"ssr","src":"virtual:$vinxi/handler/ssr","isEntry":true,"dynamicImports":["app/routes/sign-in.tsx?tsr-split=component","app/routes/reset-password.tsx?tsr-split=component","app/routes/forgot-password.tsx?tsr-split=component","app/routes/_labsquire.tsx?tsr-split=component","app/routes/index.tsx?tsr-split=component","app/routes/_labsquire/update-password.tsx?tsr-split=component","app/routes/_labsquire/get-profile.tsx?tsr-split=component","app/routes/_labsquire/users/user-table.tsx?tsr-split=component","app/routes/_labsquire/users/edit-user-form.tsx?tsr-split=component","app/routes/_labsquire/users/add-user.tsx?tsr-split=component","app/routes/_labsquire/tasks/get-task-stats.tsx?tsr-split=component","app/routes/_labsquire/tasks/add-tasks.tsx?tsr-split=component","app/routes/_labsquire/projects/project-table.tsx?tsr-split=component","app/routes/_labsquire/projects/get-single-project/add-project.tsx?tsr-split=component","app/routes/_labsquire/projects/get-single-project/$projectId/index.tsx?tsr-split=component","app/routes/_labsquire/projects/get-members/$projectId/index1.tsx?tsr-split=component"],"assets":["assets/app-Dk303kxR.css"]}},"server":{"virtual:$vinxi/handler/server":{"file":"server.js","name":"server","src":"virtual:$vinxi/handler/server","isEntry":true}}};
+				const buildManifest = {"client":{"C:/Users/sudhashini_enugula/Desktop/ProjectLabsquire18/app/styles/app.css":{"file":"assets/app-DCdd4NMP.css","src":"C:/Users/sudhashini_enugula/Desktop/ProjectLabsquire18/app/styles/app.css"},"_EditUserForm-Bz4U7vfK.js":{"file":"assets/EditUserForm-Bz4U7vfK.js","name":"EditUserForm","imports":["_client-B-y2GYcz.js","_useMutation-C3BV2mfk.js","_js.cookie-Cz0CWeBA.js"]},"_ExportCsv-Cxm1M38I.js":{"file":"assets/ExportCsv-Cxm1M38I.js","name":"ExportCsv"},"_GetMembers-C7yuMa1U.js":{"file":"assets/GetMembers-C7yuMa1U.js","name":"GetMembers","imports":["_client-B-y2GYcz.js","_useQuery-CfSD4swx.js","_useMutation-C3BV2mfk.js","_index-Bf8zZhwD.js","_js.cookie-Cz0CWeBA.js"]},"_SignIn-DGvPU3YJ.js":{"file":"assets/SignIn-DGvPU3YJ.js","name":"SignIn","imports":["_client-B-y2GYcz.js","_useMutation-C3BV2mfk.js","_index.esm-NoT5SPA0.js","_js.cookie-Cz0CWeBA.js","_createLucideIcon-1fanR_qC.js","_lock-keyhole-CLuHmpX4.js","_eye-CQC98Ot-.js"]},"_arrow-left-bw4qkG2p.js":{"file":"assets/arrow-left-bw4qkG2p.js","name":"arrow-left","imports":["_createLucideIcon-1fanR_qC.js"]},"_client-B-y2GYcz.js":{"file":"assets/client-B-y2GYcz.js","name":"client","dynamicImports":["app/routes/sign-in.tsx?tsr-split=component","app/routes/reset-password.tsx?tsr-split=component","app/routes/forgot-password.tsx?tsr-split=component","app/routes/_labsquire.tsx?tsr-split=component","app/routes/index.tsx?tsr-split=component","app/routes/_labsquire/update-password.tsx?tsr-split=component","app/routes/_labsquire/get-profile.tsx?tsr-split=component","app/routes/_labsquire/users/user-table.tsx?tsr-split=component","app/routes/_labsquire/users/edit-user-form.tsx?tsr-split=component","app/routes/_labsquire/users/add-user.tsx?tsr-split=component","app/routes/_labsquire/tasks/get-task-stats.tsx?tsr-split=component","app/routes/_labsquire/tasks/add-tasks.tsx?tsr-split=component","app/routes/_labsquire/projects/project-table.tsx?tsr-split=component","app/routes/_labsquire/projects/add-project.tsx?tsr-split=component","app/routes/_labsquire/projects/get-single-project/$projectId/index.tsx?tsr-split=component","app/routes/_labsquire/projects/get-members/$projectId/index1.tsx?tsr-split=component"],"assets":["assets/app-DCdd4NMP.css"]},"_createLucideIcon-1fanR_qC.js":{"file":"assets/createLucideIcon-1fanR_qC.js","name":"createLucideIcon","imports":["_client-B-y2GYcz.js"]},"_eye-CQC98Ot-.js":{"file":"assets/eye-CQC98Ot-.js","name":"eye","imports":["_createLucideIcon-1fanR_qC.js"]},"_index-Bf8zZhwD.js":{"file":"assets/index-Bf8zZhwD.js","name":"index","imports":["_client-B-y2GYcz.js"]},"_index.esm-NoT5SPA0.js":{"file":"assets/index.esm-NoT5SPA0.js","name":"index.esm","imports":["_client-B-y2GYcz.js"]},"_js.cookie-Cz0CWeBA.js":{"file":"assets/js.cookie-Cz0CWeBA.js","name":"js.cookie"},"_lock-keyhole-CLuHmpX4.js":{"file":"assets/lock-keyhole-CLuHmpX4.js","name":"lock-keyhole","imports":["_createLucideIcon-1fanR_qC.js"]},"_useMutation-C3BV2mfk.js":{"file":"assets/useMutation-C3BV2mfk.js","name":"useMutation","imports":["_client-B-y2GYcz.js","_utils-km2FGkQ4.js"]},"_useQuery-CfSD4swx.js":{"file":"assets/useQuery-CfSD4swx.js","name":"useQuery","imports":["_client-B-y2GYcz.js","_utils-km2FGkQ4.js"]},"_utils-km2FGkQ4.js":{"file":"assets/utils-km2FGkQ4.js","name":"utils"},"app/routes/_labsquire.tsx?tsr-split=component":{"file":"assets/_labsquire-C0rQ2MJv.js","name":"_labsquire","src":"app/routes/_labsquire.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-B-y2GYcz.js","_createLucideIcon-1fanR_qC.js"]},"app/routes/_labsquire/get-profile.tsx?tsr-split=component":{"file":"assets/get-profile-Dbfn9fbT.js","name":"get-profile","src":"app/routes/_labsquire/get-profile.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-B-y2GYcz.js","_useQuery-CfSD4swx.js","_useMutation-C3BV2mfk.js","_js.cookie-Cz0CWeBA.js","_createLucideIcon-1fanR_qC.js","_arrow-left-bw4qkG2p.js","_utils-km2FGkQ4.js"],"css":["assets/get-profile-GNLSjkBZ.css"]},"app/routes/_labsquire/projects/add-project.tsx?tsr-split=component":{"file":"assets/add-project-DLwuPKKi.js","name":"add-project","src":"app/routes/_labsquire/projects/add-project.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-B-y2GYcz.js","_useMutation-C3BV2mfk.js","_js.cookie-Cz0CWeBA.js","_utils-km2FGkQ4.js"]},"app/routes/_labsquire/projects/get-members/$projectId/index1.tsx?tsr-split=component":{"file":"assets/index1-BqEBTJ6i.js","name":"index1","src":"app/routes/_labsquire/projects/get-members/$projectId/index1.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_GetMembers-C7yuMa1U.js","_client-B-y2GYcz.js","_useQuery-CfSD4swx.js","_utils-km2FGkQ4.js","_useMutation-C3BV2mfk.js","_index-Bf8zZhwD.js","_js.cookie-Cz0CWeBA.js"]},"app/routes/_labsquire/projects/get-single-project/$projectId/index.tsx?tsr-split=component":{"file":"assets/index-D13WJgRV.js","name":"index","src":"app/routes/_labsquire/projects/get-single-project/$projectId/index.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-B-y2GYcz.js","_useQuery-CfSD4swx.js","_useMutation-C3BV2mfk.js","_js.cookie-Cz0CWeBA.js","_GetMembers-C7yuMa1U.js","_index-Bf8zZhwD.js","_utils-km2FGkQ4.js"]},"app/routes/_labsquire/projects/project-table.tsx?tsr-split=component":{"file":"assets/project-table-CmWLsNPh.js","name":"project-table","src":"app/routes/_labsquire/projects/project-table.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-B-y2GYcz.js","_useQuery-CfSD4swx.js","_js.cookie-Cz0CWeBA.js","_ExportCsv-Cxm1M38I.js","_utils-km2FGkQ4.js"]},"app/routes/_labsquire/tasks/add-tasks.tsx?tsr-split=component":{"file":"assets/add-tasks-D732tL_O.js","name":"add-tasks","src":"app/routes/_labsquire/tasks/add-tasks.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-B-y2GYcz.js","_useQuery-CfSD4swx.js","_useMutation-C3BV2mfk.js","_js.cookie-Cz0CWeBA.js","_utils-km2FGkQ4.js"]},"app/routes/_labsquire/tasks/get-task-stats.tsx?tsr-split=component":{"file":"assets/get-task-stats-CYZ475ma.js","name":"get-task-stats","src":"app/routes/_labsquire/tasks/get-task-stats.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-B-y2GYcz.js","_useQuery-CfSD4swx.js","_js.cookie-Cz0CWeBA.js","_utils-km2FGkQ4.js"]},"app/routes/_labsquire/update-password.tsx?tsr-split=component":{"file":"assets/update-password-BBg2Q-yw.js","name":"update-password","src":"app/routes/_labsquire/update-password.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-B-y2GYcz.js","_useMutation-C3BV2mfk.js","_js.cookie-Cz0CWeBA.js","_eye-CQC98Ot-.js","_arrow-left-bw4qkG2p.js","_utils-km2FGkQ4.js","_createLucideIcon-1fanR_qC.js"]},"app/routes/_labsquire/users/add-user.tsx?tsr-split=component":{"file":"assets/add-user-Fh7ifQi7.js","name":"add-user","src":"app/routes/_labsquire/users/add-user.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-B-y2GYcz.js","_useMutation-C3BV2mfk.js","_index.esm-NoT5SPA0.js","_js.cookie-Cz0CWeBA.js","_eye-CQC98Ot-.js","_utils-km2FGkQ4.js","_createLucideIcon-1fanR_qC.js"]},"app/routes/_labsquire/users/edit-user-form.tsx?tsr-split=component":{"file":"assets/edit-user-form-CGetXMrD.js","name":"edit-user-form","src":"app/routes/_labsquire/users/edit-user-form.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_EditUserForm-Bz4U7vfK.js","_client-B-y2GYcz.js","_useMutation-C3BV2mfk.js","_utils-km2FGkQ4.js","_js.cookie-Cz0CWeBA.js"]},"app/routes/_labsquire/users/user-table.tsx?tsr-split=component":{"file":"assets/user-table-DlBh2KyI.js","name":"user-table","src":"app/routes/_labsquire/users/user-table.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-B-y2GYcz.js","_useQuery-CfSD4swx.js","_js.cookie-Cz0CWeBA.js","_index-Bf8zZhwD.js","_EditUserForm-Bz4U7vfK.js","_ExportCsv-Cxm1M38I.js","_utils-km2FGkQ4.js","_useMutation-C3BV2mfk.js"]},"app/routes/forgot-password.tsx?tsr-split=component":{"file":"assets/forgot-password-C83rNnOL.js","name":"forgot-password","src":"app/routes/forgot-password.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-B-y2GYcz.js","_useMutation-C3BV2mfk.js","_index.esm-NoT5SPA0.js","_utils-km2FGkQ4.js"]},"app/routes/index.tsx?tsr-split=component":{"file":"assets/index-BTape2Z6.js","name":"index","src":"app/routes/index.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-B-y2GYcz.js","_SignIn-DGvPU3YJ.js","_useMutation-C3BV2mfk.js","_utils-km2FGkQ4.js","_index.esm-NoT5SPA0.js","_js.cookie-Cz0CWeBA.js","_createLucideIcon-1fanR_qC.js","_lock-keyhole-CLuHmpX4.js","_eye-CQC98Ot-.js"]},"app/routes/reset-password.tsx?tsr-split=component":{"file":"assets/reset-password-qr-pmvqO.js","name":"reset-password","src":"app/routes/reset-password.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_client-B-y2GYcz.js","_useMutation-C3BV2mfk.js","_lock-keyhole-CLuHmpX4.js","_eye-CQC98Ot-.js","_utils-km2FGkQ4.js","_createLucideIcon-1fanR_qC.js"]},"app/routes/sign-in.tsx?tsr-split=component":{"file":"assets/sign-in-DmFy6UFW.js","name":"sign-in","src":"app/routes/sign-in.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_SignIn-DGvPU3YJ.js","_client-B-y2GYcz.js","_useMutation-C3BV2mfk.js","_utils-km2FGkQ4.js","_index.esm-NoT5SPA0.js","_js.cookie-Cz0CWeBA.js","_createLucideIcon-1fanR_qC.js","_lock-keyhole-CLuHmpX4.js","_eye-CQC98Ot-.js"]},"virtual:$vinxi/handler/client":{"file":"assets/client-DI6AuHZ9.js","name":"client","src":"virtual:$vinxi/handler/client","isEntry":true,"imports":["_client-B-y2GYcz.js"]}},"ssr":{"C:/Users/sudhashini_enugula/Desktop/ProjectLabsquire18/app/styles/app.css":{"file":"assets/app-DCdd4NMP.css","src":"C:/Users/sudhashini_enugula/Desktop/ProjectLabsquire18/app/styles/app.css"},"_EditUserForm-BVyw8kU9.js":{"file":"assets/EditUserForm-BVyw8kU9.js","name":"EditUserForm"},"_ExportCsv-Cxm1M38I.js":{"file":"assets/ExportCsv-Cxm1M38I.js","name":"ExportCsv"},"_GetMembers-CUvba0q7.js":{"file":"assets/GetMembers-CUvba0q7.js","name":"GetMembers"},"_SignIn-C0fgN4Ub.js":{"file":"assets/SignIn-C0fgN4Ub.js","name":"SignIn"},"app/routes/_labsquire.tsx?tsr-split=component":{"file":"assets/_labsquire-BspXxI4i.js","name":"_labsquire","src":"app/routes/_labsquire.tsx?tsr-split=component","isDynamicEntry":true},"app/routes/_labsquire/get-profile.tsx?tsr-split=component":{"file":"assets/get-profile-CwZG9TIE.js","name":"get-profile","src":"app/routes/_labsquire/get-profile.tsx?tsr-split=component","isDynamicEntry":true,"css":["assets/get-profile-GNLSjkBZ.css"]},"app/routes/_labsquire/projects/add-project.tsx?tsr-split=component":{"file":"assets/add-project-NeOJyKaG.js","name":"add-project","src":"app/routes/_labsquire/projects/add-project.tsx?tsr-split=component","isDynamicEntry":true},"app/routes/_labsquire/projects/get-members/$projectId/index1.tsx?tsr-split=component":{"file":"assets/index1-BEfLdtsF.js","name":"index1","src":"app/routes/_labsquire/projects/get-members/$projectId/index1.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_GetMembers-CUvba0q7.js"]},"app/routes/_labsquire/projects/get-single-project/$projectId/index.tsx?tsr-split=component":{"file":"assets/index-CZVf3ryT.js","name":"index","src":"app/routes/_labsquire/projects/get-single-project/$projectId/index.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_GetMembers-CUvba0q7.js"]},"app/routes/_labsquire/projects/project-table.tsx?tsr-split=component":{"file":"assets/project-table-7x3YQ3gq.js","name":"project-table","src":"app/routes/_labsquire/projects/project-table.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_ExportCsv-Cxm1M38I.js"]},"app/routes/_labsquire/tasks/add-tasks.tsx?tsr-split=component":{"file":"assets/add-tasks-DOzKJXMr.js","name":"add-tasks","src":"app/routes/_labsquire/tasks/add-tasks.tsx?tsr-split=component","isDynamicEntry":true},"app/routes/_labsquire/tasks/get-task-stats.tsx?tsr-split=component":{"file":"assets/get-task-stats-CCPbpruE.js","name":"get-task-stats","src":"app/routes/_labsquire/tasks/get-task-stats.tsx?tsr-split=component","isDynamicEntry":true},"app/routes/_labsquire/update-password.tsx?tsr-split=component":{"file":"assets/update-password-CT9TQj3Z.js","name":"update-password","src":"app/routes/_labsquire/update-password.tsx?tsr-split=component","isDynamicEntry":true},"app/routes/_labsquire/users/add-user.tsx?tsr-split=component":{"file":"assets/add-user-CoMOtsqu.js","name":"add-user","src":"app/routes/_labsquire/users/add-user.tsx?tsr-split=component","isDynamicEntry":true},"app/routes/_labsquire/users/edit-user-form.tsx?tsr-split=component":{"file":"assets/edit-user-form-qW1JUAKi.js","name":"edit-user-form","src":"app/routes/_labsquire/users/edit-user-form.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_EditUserForm-BVyw8kU9.js"]},"app/routes/_labsquire/users/user-table.tsx?tsr-split=component":{"file":"assets/user-table-Dr3moyOM.js","name":"user-table","src":"app/routes/_labsquire/users/user-table.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_EditUserForm-BVyw8kU9.js","_ExportCsv-Cxm1M38I.js"]},"app/routes/forgot-password.tsx?tsr-split=component":{"file":"assets/forgot-password-CgVQ0AZo.js","name":"forgot-password","src":"app/routes/forgot-password.tsx?tsr-split=component","isDynamicEntry":true},"app/routes/index.tsx?tsr-split=component":{"file":"assets/index-CdMbw2w4.js","name":"index","src":"app/routes/index.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_SignIn-C0fgN4Ub.js"]},"app/routes/reset-password.tsx?tsr-split=component":{"file":"assets/reset-password-NE-D3iDd.js","name":"reset-password","src":"app/routes/reset-password.tsx?tsr-split=component","isDynamicEntry":true},"app/routes/sign-in.tsx?tsr-split=component":{"file":"assets/sign-in-DObYVqdW.js","name":"sign-in","src":"app/routes/sign-in.tsx?tsr-split=component","isDynamicEntry":true,"imports":["_SignIn-C0fgN4Ub.js"]},"virtual:$vinxi/handler/ssr":{"file":"ssr.js","name":"ssr","src":"virtual:$vinxi/handler/ssr","isEntry":true,"dynamicImports":["app/routes/sign-in.tsx?tsr-split=component","app/routes/reset-password.tsx?tsr-split=component","app/routes/forgot-password.tsx?tsr-split=component","app/routes/_labsquire.tsx?tsr-split=component","app/routes/index.tsx?tsr-split=component","app/routes/_labsquire/update-password.tsx?tsr-split=component","app/routes/_labsquire/get-profile.tsx?tsr-split=component","app/routes/_labsquire/users/user-table.tsx?tsr-split=component","app/routes/_labsquire/users/edit-user-form.tsx?tsr-split=component","app/routes/_labsquire/users/add-user.tsx?tsr-split=component","app/routes/_labsquire/tasks/get-task-stats.tsx?tsr-split=component","app/routes/_labsquire/tasks/add-tasks.tsx?tsr-split=component","app/routes/_labsquire/projects/project-table.tsx?tsr-split=component","app/routes/_labsquire/projects/add-project.tsx?tsr-split=component","app/routes/_labsquire/projects/get-single-project/$projectId/index.tsx?tsr-split=component","app/routes/_labsquire/projects/get-members/$projectId/index1.tsx?tsr-split=component"],"assets":["assets/app-DCdd4NMP.css"]}},"server":{"virtual:$vinxi/handler/server":{"file":"server.js","name":"server","src":"virtual:$vinxi/handler/server","isEntry":true}}};
 
 				const routeManifest = {};
 
@@ -4477,264 +4477,264 @@ app
 ];
 
 const assets = {
-  "/assets/app-Dk303kxR.css": {
+  "/assets/app-DCdd4NMP.css": {
     "type": "text/css; charset=utf-8",
-    "etag": "\"4954-MU2ZL8hOUV578BUFnBj6jnUdUes\"",
-    "mtime": "2025-03-29T04:38:59.106Z",
-    "size": 18772,
-    "path": "../public/assets/app-Dk303kxR.css"
+    "etag": "\"4a58-OhJyRTgwaInvdWqd0WRdSj2G1gQ\"",
+    "mtime": "2025-03-29T07:40:06.670Z",
+    "size": 19032,
+    "path": "../public/assets/app-DCdd4NMP.css"
   },
   "/assets/get-profile-GNLSjkBZ.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"374b-LO87IMG1jU0QxxKwaW4OgAPAU5w\"",
-    "mtime": "2025-03-29T04:38:59.106Z",
+    "mtime": "2025-03-29T07:40:06.662Z",
     "size": 14155,
     "path": "../public/assets/get-profile-GNLSjkBZ.css"
   },
   "/_build/.vite/manifest.json": {
     "type": "application/json",
-    "etag": "\"2d9f-Zdwz0qn7EY+o4v4XyAfUBOdgHPE\"",
-    "mtime": "2025-03-29T04:38:56.467Z",
-    "size": 11679,
+    "etag": "\"2d66-mZmbgo2ewn9hMJ/t/FTwYADgR8g\"",
+    "mtime": "2025-03-29T07:40:03.594Z",
+    "size": 11622,
     "path": "../public/_build/.vite/manifest.json"
   },
-  "/_build/assets/add-project-CKqL5EJa.js": {
+  "/_build/assets/add-project-DLwuPKKi.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"cae-Vo3oFCHLce6D8dB3/aAPouxA6qo\"",
-    "mtime": "2025-03-29T04:38:56.467Z",
+    "etag": "\"cae-PK5n8aXgeJQA0rrXUM2uNQFeeKE\"",
+    "mtime": "2025-03-29T07:40:03.594Z",
     "size": 3246,
-    "path": "../public/_build/assets/add-project-CKqL5EJa.js"
+    "path": "../public/_build/assets/add-project-DLwuPKKi.js"
   },
-  "/_build/assets/add-tasks-CcAyF7fC.js": {
+  "/_build/assets/add-tasks-D732tL_O.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"13de-gupkcoY+2JcjvFMSWLSgNZEDRQc\"",
-    "mtime": "2025-03-29T04:38:56.467Z",
+    "etag": "\"13de-d5PLoxqYTvsrPBplzNOUq6B/m78\"",
+    "mtime": "2025-03-29T07:40:03.594Z",
     "size": 5086,
-    "path": "../public/_build/assets/add-tasks-CcAyF7fC.js"
+    "path": "../public/_build/assets/add-tasks-D732tL_O.js"
   },
-  "/_build/assets/add-user-CEcNkoJo.js": {
+  "/_build/assets/add-user-Fh7ifQi7.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"1457-3u+R2SyHB4nMVDSo7vObkywCl6U\"",
-    "mtime": "2025-03-29T04:38:56.457Z",
+    "etag": "\"1457-eDiuP0iDToqXwCrfCjro3KVwAck\"",
+    "mtime": "2025-03-29T07:40:03.565Z",
     "size": 5207,
-    "path": "../public/_build/assets/add-user-CEcNkoJo.js"
+    "path": "../public/_build/assets/add-user-Fh7ifQi7.js"
   },
-  "/_build/assets/app-Dk303kxR.css": {
+  "/_build/assets/app-DCdd4NMP.css": {
     "type": "text/css; charset=utf-8",
-    "etag": "\"4954-MU2ZL8hOUV578BUFnBj6jnUdUes\"",
-    "mtime": "2025-03-29T04:38:56.437Z",
-    "size": 18772,
-    "path": "../public/_build/assets/app-Dk303kxR.css"
+    "etag": "\"4a58-OhJyRTgwaInvdWqd0WRdSj2G1gQ\"",
+    "mtime": "2025-03-29T07:40:03.582Z",
+    "size": 19032,
+    "path": "../public/_build/assets/app-DCdd4NMP.css"
   },
-  "/_build/assets/arrow-left-DtyFfLUa.js": {
+  "/_build/assets/arrow-left-bw4qkG2p.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"15d-fAlIy+JA5SVpeEf9UWYomH7mju0\"",
-    "mtime": "2025-03-29T04:38:56.457Z",
+    "etag": "\"15d-2oR+XD5TkSXkn0f2mJlcAIYpc1c\"",
+    "mtime": "2025-03-29T07:40:03.582Z",
     "size": 349,
-    "path": "../public/_build/assets/arrow-left-DtyFfLUa.js"
+    "path": "../public/_build/assets/arrow-left-bw4qkG2p.js"
   },
-  "/_build/assets/client-CEzPjcs2.js": {
+  "/_build/assets/client-B-y2GYcz.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"45d91-iobEJ/6z6lgvyOVLDx4IxZ1GPKA\"",
-    "mtime": "2025-03-29T04:38:56.457Z",
-    "size": 286097,
-    "path": "../public/_build/assets/client-CEzPjcs2.js"
+    "etag": "\"45d48-JenHZrLYtNdwDm7kd9wabssMgis\"",
+    "mtime": "2025-03-29T07:40:03.582Z",
+    "size": 286024,
+    "path": "../public/_build/assets/client-B-y2GYcz.js"
   },
-  "/_build/assets/client-Ci9HFxcd.js": {
+  "/_build/assets/client-DI6AuHZ9.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"3f-OA3jY0m3zpdNXYJqRMSSQtGf+wU\"",
-    "mtime": "2025-03-29T04:38:56.468Z",
+    "etag": "\"3f-GuYyhm0UkbdvIWVfwQqgDgfBpCg\"",
+    "mtime": "2025-03-29T07:40:03.594Z",
     "size": 63,
-    "path": "../public/_build/assets/client-Ci9HFxcd.js"
+    "path": "../public/_build/assets/client-DI6AuHZ9.js"
   },
-  "/_build/assets/createLucideIcon-xFbQuUs1.js": {
+  "/_build/assets/createLucideIcon-1fanR_qC.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"6ca-taTSiRH7WSpAKMi/3WqQy0Ypchc\"",
-    "mtime": "2025-03-29T04:38:56.457Z",
+    "etag": "\"6ca-3gs5X2eAp/2QbdQWMi2pIoX7pPQ\"",
+    "mtime": "2025-03-29T07:40:03.574Z",
     "size": 1738,
-    "path": "../public/_build/assets/createLucideIcon-xFbQuUs1.js"
+    "path": "../public/_build/assets/createLucideIcon-1fanR_qC.js"
   },
-  "/_build/assets/edit-user-form-Cdgsygsc.js": {
+  "/_build/assets/edit-user-form-CGetXMrD.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"cc-MQbBfj+ThZXzPrJxiA9f6TkYHks\"",
-    "mtime": "2025-03-29T04:38:56.457Z",
+    "etag": "\"cc-6TOVwKxGrZxWLuNrINj9iiE91ec\"",
+    "mtime": "2025-03-29T07:40:03.582Z",
     "size": 204,
-    "path": "../public/_build/assets/edit-user-form-Cdgsygsc.js"
+    "path": "../public/_build/assets/edit-user-form-CGetXMrD.js"
   },
-  "/_build/assets/EditUserForm-CG3GExWL.js": {
+  "/_build/assets/EditUserForm-Bz4U7vfK.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"108f-r3doHOkYTaP9LEPF9fFxz7kV2RE\"",
-    "mtime": "2025-03-29T04:38:56.457Z",
+    "etag": "\"108f-0CPQLFAksVk5pTFd5mKCBbQDXhM\"",
+    "mtime": "2025-03-29T07:40:03.582Z",
     "size": 4239,
-    "path": "../public/_build/assets/EditUserForm-CG3GExWL.js"
+    "path": "../public/_build/assets/EditUserForm-Bz4U7vfK.js"
   },
   "/_build/assets/ExportCsv-Cxm1M38I.js": {
     "type": "text/javascript; charset=utf-8",
     "etag": "\"1b3-xjtiymi/UQSdo8AlBzkfjoS6f9E\"",
-    "mtime": "2025-03-29T04:38:56.467Z",
+    "mtime": "2025-03-29T07:40:03.594Z",
     "size": 435,
     "path": "../public/_build/assets/ExportCsv-Cxm1M38I.js"
   },
-  "/_build/assets/eye-VGLHSxm1.js": {
+  "/_build/assets/eye-CQC98Ot-.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"3e2-O7TwTFZ5k1fDzRTKXxkymtpyT00\"",
-    "mtime": "2025-03-29T04:38:56.457Z",
+    "etag": "\"3e2-Vkh7BbPxFlMEktCeqw1DZbMSrxM\"",
+    "mtime": "2025-03-29T07:40:03.582Z",
     "size": 994,
-    "path": "../public/_build/assets/eye-VGLHSxm1.js"
+    "path": "../public/_build/assets/eye-CQC98Ot-.js"
   },
-  "/_build/assets/forgot-password-Br919E7Z.js": {
+  "/_build/assets/forgot-password-C83rNnOL.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"b7c-V8KkVVgRGg4rozlDoksDfWwQ9eA\"",
-    "mtime": "2025-03-29T04:38:56.457Z",
+    "etag": "\"b7c-QcttHdHeUiL2LxVoc89mHlYWWm8\"",
+    "mtime": "2025-03-29T07:40:03.582Z",
     "size": 2940,
-    "path": "../public/_build/assets/forgot-password-Br919E7Z.js"
+    "path": "../public/_build/assets/forgot-password-C83rNnOL.js"
   },
-  "/_build/assets/get-profile-DK97tu8l.js": {
+  "/_build/assets/get-profile-Dbfn9fbT.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"91fc-hLvL/I17/grH0jlo1dxdYAO0bZo\"",
-    "mtime": "2025-03-29T04:38:56.457Z",
+    "etag": "\"91fc-1eBLKcH0spwyeX0iZNDlUmfI3M0\"",
+    "mtime": "2025-03-29T07:40:03.582Z",
     "size": 37372,
-    "path": "../public/_build/assets/get-profile-DK97tu8l.js"
+    "path": "../public/_build/assets/get-profile-Dbfn9fbT.js"
   },
   "/_build/assets/get-profile-GNLSjkBZ.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"374b-LO87IMG1jU0QxxKwaW4OgAPAU5w\"",
-    "mtime": "2025-03-29T04:38:56.457Z",
+    "mtime": "2025-03-29T07:40:03.582Z",
     "size": 14155,
     "path": "../public/_build/assets/get-profile-GNLSjkBZ.css"
   },
-  "/_build/assets/get-task-stats-BwjK4C4f.js": {
+  "/_build/assets/get-task-stats-CYZ475ma.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"7d1-wouqtJbUYlkiH6ALZ1xRwdpKvmo\"",
-    "mtime": "2025-03-29T04:38:56.467Z",
+    "etag": "\"7d1-RZcNZ6+zUV//uWsINZq3XmdEHbs\"",
+    "mtime": "2025-03-29T07:40:03.582Z",
     "size": 2001,
-    "path": "../public/_build/assets/get-task-stats-BwjK4C4f.js"
+    "path": "../public/_build/assets/get-task-stats-CYZ475ma.js"
   },
-  "/_build/assets/GetMembers-B30HNYHZ.js": {
+  "/_build/assets/GetMembers-C7yuMa1U.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"16d6-yEm6l9w6+sHb+mgYj/Pi3tkYLwQ\"",
-    "mtime": "2025-03-29T04:38:56.468Z",
+    "etag": "\"16d6-EtdfwnN0Ir3CdKO2DsJwYelHPtU\"",
+    "mtime": "2025-03-29T07:40:03.594Z",
     "size": 5846,
-    "path": "../public/_build/assets/GetMembers-B30HNYHZ.js"
+    "path": "../public/_build/assets/GetMembers-C7yuMa1U.js"
   },
-  "/_build/assets/index-Bq7RBMIA.js": {
+  "/_build/assets/index-Bf8zZhwD.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"bfd9-o9Jm0JPBTgI4liyDxbSSS7CzAFU\"",
-    "mtime": "2025-03-29T04:38:56.468Z",
+    "etag": "\"bfd9-p2/BIyZAbr7DSNOVWg/tbL3OFYo\"",
+    "mtime": "2025-03-29T07:40:03.594Z",
     "size": 49113,
-    "path": "../public/_build/assets/index-Bq7RBMIA.js"
+    "path": "../public/_build/assets/index-Bf8zZhwD.js"
   },
-  "/_build/assets/index-BRBTVs4n.js": {
+  "/_build/assets/index-BTape2Z6.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"e1a2-pei3+nMqzArEj3lVtcR97WsGQDM\"",
-    "mtime": "2025-03-29T04:38:56.468Z",
-    "size": 57762,
-    "path": "../public/_build/assets/index-BRBTVs4n.js"
-  },
-  "/_build/assets/index-CE5iwYe2.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"173-TWOrpH8tgaKIu5547NyWETdVvvo\"",
-    "mtime": "2025-03-29T04:38:56.457Z",
+    "etag": "\"173-iU1PYj4uexG5iTTj4FSEOZfTKGQ\"",
+    "mtime": "2025-03-29T07:40:03.582Z",
     "size": 371,
-    "path": "../public/_build/assets/index-CE5iwYe2.js"
+    "path": "../public/_build/assets/index-BTape2Z6.js"
   },
-  "/_build/assets/index.esm-DuzvGBt5.js": {
+  "/_build/assets/index-D13WJgRV.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"54f6-mNUAVwP5xw2dKZ2+1pIhZSr8GKc\"",
-    "mtime": "2025-03-29T04:38:56.457Z",
+    "etag": "\"e321-hTJKx2PgQUMHRmqQowDedqe/TVA\"",
+    "mtime": "2025-03-29T07:40:03.594Z",
+    "size": 58145,
+    "path": "../public/_build/assets/index-D13WJgRV.js"
+  },
+  "/_build/assets/index.esm-NoT5SPA0.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"54f6-zNdDLmNWgiyUckw6rArwBD8Rl6Q\"",
+    "mtime": "2025-03-29T07:40:03.582Z",
     "size": 21750,
-    "path": "../public/_build/assets/index.esm-DuzvGBt5.js"
+    "path": "../public/_build/assets/index.esm-NoT5SPA0.js"
   },
-  "/_build/assets/index1-B7LLhx9z.js": {
+  "/_build/assets/index1-BqEBTJ6i.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"105-rH+sXYfXZxDvEr3rVXgrSrb0e8c\"",
-    "mtime": "2025-03-29T04:38:56.467Z",
+    "etag": "\"105-XFOq1cuY0IBmhxP9gZkKbt62bt4\"",
+    "mtime": "2025-03-29T07:40:03.594Z",
     "size": 261,
-    "path": "../public/_build/assets/index1-B7LLhx9z.js"
+    "path": "../public/_build/assets/index1-BqEBTJ6i.js"
   },
   "/_build/assets/js.cookie-Cz0CWeBA.js": {
     "type": "text/javascript; charset=utf-8",
     "etag": "\"585-/9pYGJdE9MxSl8OBLtqufFFjaSQ\"",
-    "mtime": "2025-03-29T04:38:56.468Z",
+    "mtime": "2025-03-29T07:40:03.594Z",
     "size": 1413,
     "path": "../public/_build/assets/js.cookie-Cz0CWeBA.js"
   },
-  "/_build/assets/lock-keyhole-DqYgRwkb.js": {
+  "/_build/assets/lock-keyhole-CLuHmpX4.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"1b7-jbDlcS/t5qaHqok+TfIcfcTI+OY\"",
-    "mtime": "2025-03-29T04:38:56.457Z",
+    "etag": "\"1b7-962uQSoUquRfDP81GnNTHlQBf94\"",
+    "mtime": "2025-03-29T07:40:03.582Z",
     "size": 439,
-    "path": "../public/_build/assets/lock-keyhole-DqYgRwkb.js"
+    "path": "../public/_build/assets/lock-keyhole-CLuHmpX4.js"
   },
-  "/_build/assets/project-table-DCdBQmF9.js": {
+  "/_build/assets/project-table-CmWLsNPh.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"1921-eoNlr/ULfUCccTQj3YbN3OkeZHY\"",
-    "mtime": "2025-03-29T04:38:56.475Z",
-    "size": 6433,
-    "path": "../public/_build/assets/project-table-DCdBQmF9.js"
+    "etag": "\"191f-obcfVFmDnX76SkeiYd26Hbh3uio\"",
+    "mtime": "2025-03-29T07:40:03.594Z",
+    "size": 6431,
+    "path": "../public/_build/assets/project-table-CmWLsNPh.js"
   },
-  "/_build/assets/reset-password-Dbv_EY50.js": {
+  "/_build/assets/reset-password-qr-pmvqO.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"13c2-k0qXbtpCAI9OLnSWGQ/CWMopJn4\"",
-    "mtime": "2025-03-29T04:38:56.457Z",
+    "etag": "\"13c2-kQ7rzBLnU0nmWRu0cO0GevYoVLI\"",
+    "mtime": "2025-03-29T07:40:03.582Z",
     "size": 5058,
-    "path": "../public/_build/assets/reset-password-Dbv_EY50.js"
+    "path": "../public/_build/assets/reset-password-qr-pmvqO.js"
   },
-  "/_build/assets/sign-in-BRJAJLio.js": {
+  "/_build/assets/sign-in-DmFy6UFW.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"14a-nlDsSmvJrrqZtZGYBTWDhkDcRNQ\"",
-    "mtime": "2025-03-29T04:38:56.456Z",
+    "etag": "\"14a-ucnzcZIRt5Qv2cmnY6wj7R4hRok\"",
+    "mtime": "2025-03-29T07:40:03.582Z",
     "size": 330,
-    "path": "../public/_build/assets/sign-in-BRJAJLio.js"
+    "path": "../public/_build/assets/sign-in-DmFy6UFW.js"
   },
-  "/_build/assets/SignIn-Jg-6cYNj.js": {
+  "/_build/assets/SignIn-DGvPU3YJ.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"ed4-VO538KoXNlEXXnPCbjuMPFhNJKY\"",
-    "mtime": "2025-03-29T04:38:56.457Z",
+    "etag": "\"ed4-rVh6a7hqllHQleXPEzDv+SyYNzs\"",
+    "mtime": "2025-03-29T07:40:03.582Z",
     "size": 3796,
-    "path": "../public/_build/assets/SignIn-Jg-6cYNj.js"
+    "path": "../public/_build/assets/SignIn-DGvPU3YJ.js"
   },
-  "/_build/assets/update-password-rcT6NG_a.js": {
+  "/_build/assets/update-password-BBg2Q-yw.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"14ea-yyFb+TXkVZNw/1CZ5xmc6021APM\"",
-    "mtime": "2025-03-29T04:38:56.457Z",
+    "etag": "\"14ea-jk/NG8A0l/SzE3PRa4T5+BIbRzQ\"",
+    "mtime": "2025-03-29T07:40:03.582Z",
     "size": 5354,
-    "path": "../public/_build/assets/update-password-rcT6NG_a.js"
+    "path": "../public/_build/assets/update-password-BBg2Q-yw.js"
   },
-  "/_build/assets/useMutation-Cm7FsQBV.js": {
+  "/_build/assets/useMutation-C3BV2mfk.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"7df-Az7DYIYqv5eE7RdCGq+2WH7XEO8\"",
-    "mtime": "2025-03-29T04:38:56.468Z",
+    "etag": "\"7df-Nb5dyVAPQWdRO1Lpj6tfYPu4fcs\"",
+    "mtime": "2025-03-29T07:40:03.594Z",
     "size": 2015,
-    "path": "../public/_build/assets/useMutation-Cm7FsQBV.js"
+    "path": "../public/_build/assets/useMutation-C3BV2mfk.js"
   },
-  "/_build/assets/useQuery-BenxNObl.js": {
+  "/_build/assets/useQuery-CfSD4swx.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"2232-jpNKTVKouqUihTE1sKYjn4B954A\"",
-    "mtime": "2025-03-29T04:38:56.468Z",
+    "etag": "\"2232-fdSPtG+0rqAQUhHqpxzNNZef/dk\"",
+    "mtime": "2025-03-29T07:40:03.594Z",
     "size": 8754,
-    "path": "../public/_build/assets/useQuery-BenxNObl.js"
+    "path": "../public/_build/assets/useQuery-CfSD4swx.js"
   },
-  "/_build/assets/user-table-iQx8TZrj.js": {
+  "/_build/assets/user-table-DlBh2KyI.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"19da-gIh4gXJULxiSwkLswOv/RU0/DKA\"",
-    "mtime": "2025-03-29T04:38:56.457Z",
+    "etag": "\"19da-Ax+tQ3uL2Lv7tHFDfiBopP0hOUk\"",
+    "mtime": "2025-03-29T07:40:03.582Z",
     "size": 6618,
-    "path": "../public/_build/assets/user-table-iQx8TZrj.js"
+    "path": "../public/_build/assets/user-table-DlBh2KyI.js"
   },
   "/_build/assets/utils-km2FGkQ4.js": {
     "type": "text/javascript; charset=utf-8",
     "etag": "\"5d-VNCMU/3FyZMvigvstvQUblO0oGI\"",
-    "mtime": "2025-03-29T04:38:56.468Z",
+    "mtime": "2025-03-29T07:40:03.594Z",
     "size": 93,
     "path": "../public/_build/assets/utils-km2FGkQ4.js"
   },
-  "/_build/assets/_labsquire-Cx60mLnY.js": {
+  "/_build/assets/_labsquire-C0rQ2MJv.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"186c-MLHq4sWQ3f1+okrnnyKHBTiyadQ\"",
-    "mtime": "2025-03-29T04:38:56.457Z",
+    "etag": "\"186c-f8H2Sd8IsHbkSR2gaXnIJFx3CUk\"",
+    "mtime": "2025-03-29T07:40:03.582Z",
     "size": 6252,
-    "path": "../public/_build/assets/_labsquire-Cx60mLnY.js"
+    "path": "../public/_build/assets/_labsquire-C0rQ2MJv.js"
   }
 };
 
@@ -4984,7 +4984,7 @@ function x$1(n) {
 function b(e) {
   return jsx(RouterProvider, { router: e.router });
 }
-const J = defineHandlerCallback(async ({ request: e, router: r, responseHeaders: p }) => {
+const Y = defineHandlerCallback(async ({ request: e, router: r, responseHeaders: p }) => {
   if (typeof d$1.renderToReadableStream == "function") {
     const n = await d$1.renderToReadableStream(jsx(b, { router: r }), { signal: e.signal });
     isbot(e.headers.get("User-Agent")) && await n.allReady;
@@ -5008,43 +5008,43 @@ const J = defineHandlerCallback(async ({ request: e, router: r, responseHeaders:
     return new Response(i, { status: r.state.statusCode, headers: p });
   }
   throw new Error("No renderToReadableStream or renderToPipeableStream found in react-dom/server. Ensure you are using a version of react-dom that supports streaming.");
-}), K = () => ({ routes: { __root__: { filePath: "__root.tsx", children: ["/", "/_labsquire", "/forgot-password", "/reset-password", "/sign-in"], preloads: ["\\_build\\assets\\client-Ci9HFxcd.js", "\\_build\\assets\\client-CEzPjcs2.js"] }, "/": { filePath: "index.tsx" }, "/_labsquire": { filePath: "_labsquire.tsx", children: ["/_labsquire/get-profile", "/_labsquire/update-password", "/_labsquire/projects/project-table", "/_labsquire/tasks/add-tasks", "/_labsquire/tasks/get-task-stats", "/_labsquire/users/add-user", "/_labsquire/users/edit-user-form", "/_labsquire/users/user-table", "/_labsquire/projects/get-single-project/add-project", "/_labsquire/projects/get-members/$projectId/index1", "/_labsquire/projects/get-single-project/$projectId/"] }, "/forgot-password": { filePath: "forgot-password.tsx" }, "/reset-password": { filePath: "reset-password.tsx" }, "/sign-in": { filePath: "sign-in.tsx" }, "/_labsquire/get-profile": { filePath: "_labsquire/get-profile.tsx", parent: "/_labsquire" }, "/_labsquire/update-password": { filePath: "_labsquire/update-password.tsx", parent: "/_labsquire" }, "/_labsquire/projects/project-table": { filePath: "_labsquire/projects/project-table.tsx", parent: "/_labsquire" }, "/_labsquire/tasks/add-tasks": { filePath: "_labsquire/tasks/add-tasks.tsx", parent: "/_labsquire" }, "/_labsquire/tasks/get-task-stats": { filePath: "_labsquire/tasks/get-task-stats.tsx", parent: "/_labsquire" }, "/_labsquire/users/add-user": { filePath: "_labsquire/users/add-user.tsx", parent: "/_labsquire" }, "/_labsquire/users/edit-user-form": { filePath: "_labsquire/users/edit-user-form.tsx", parent: "/_labsquire" }, "/_labsquire/users/user-table": { filePath: "_labsquire/users/user-table.tsx", parent: "/_labsquire" }, "/_labsquire/projects/get-single-project/add-project": { filePath: "_labsquire/projects/get-single-project/add-project.tsx", parent: "/_labsquire" }, "/_labsquire/projects/get-members/$projectId/index1": { filePath: "_labsquire/projects/get-members/$projectId/index1.tsx", parent: "/_labsquire" }, "/_labsquire/projects/get-single-project/$projectId/": { filePath: "_labsquire/projects/get-single-project/$projectId/index.tsx", parent: "/_labsquire" } } });
-function V(e) {
+}), Z = () => ({ routes: { __root__: { filePath: "__root.tsx", children: ["/", "/_labsquire", "/forgot-password", "/reset-password", "/sign-in"], preloads: ["\\_build\\assets\\client-DI6AuHZ9.js", "\\_build\\assets\\client-B-y2GYcz.js"] }, "/": { filePath: "index.tsx" }, "/_labsquire": { filePath: "_labsquire.tsx", children: ["/_labsquire/get-profile", "/_labsquire/update-password", "/_labsquire/projects/add-project", "/_labsquire/projects/project-table", "/_labsquire/tasks/add-tasks", "/_labsquire/tasks/get-task-stats", "/_labsquire/users/add-user", "/_labsquire/users/edit-user-form", "/_labsquire/users/user-table", "/_labsquire/projects/get-members/$projectId/index1", "/_labsquire/projects/get-single-project/$projectId/"] }, "/forgot-password": { filePath: "forgot-password.tsx" }, "/reset-password": { filePath: "reset-password.tsx" }, "/sign-in": { filePath: "sign-in.tsx" }, "/_labsquire/get-profile": { filePath: "_labsquire/get-profile.tsx", parent: "/_labsquire" }, "/_labsquire/update-password": { filePath: "_labsquire/update-password.tsx", parent: "/_labsquire" }, "/_labsquire/projects/add-project": { filePath: "_labsquire/projects/add-project.tsx", parent: "/_labsquire" }, "/_labsquire/projects/project-table": { filePath: "_labsquire/projects/project-table.tsx", parent: "/_labsquire" }, "/_labsquire/tasks/add-tasks": { filePath: "_labsquire/tasks/add-tasks.tsx", parent: "/_labsquire" }, "/_labsquire/tasks/get-task-stats": { filePath: "_labsquire/tasks/get-task-stats.tsx", parent: "/_labsquire" }, "/_labsquire/users/add-user": { filePath: "_labsquire/users/add-user.tsx", parent: "/_labsquire" }, "/_labsquire/users/edit-user-form": { filePath: "_labsquire/users/edit-user-form.tsx", parent: "/_labsquire" }, "/_labsquire/users/user-table": { filePath: "_labsquire/users/user-table.tsx", parent: "/_labsquire" }, "/_labsquire/projects/get-members/$projectId/index1": { filePath: "_labsquire/projects/get-members/$projectId/index1.tsx", parent: "/_labsquire" }, "/_labsquire/projects/get-single-project/$projectId/": { filePath: "_labsquire/projects/get-single-project/$projectId/index.tsx", parent: "/_labsquire" } } });
+function J(e) {
   return globalThis.MANIFEST[e];
 }
-function X() {
+function K() {
   var _a;
-  const e = K(), r = e.routes.__root__ = e.routes.__root__ || {};
+  const e = Z(), r = e.routes.__root__ = e.routes.__root__ || {};
   r.assets = r.assets || [];
   let p = "";
-  const n = V("client"), i = (_a = n.inputs[n.handler]) == null ? void 0 : _a.output.path;
+  const n = J("client"), i = (_a = n.inputs[n.handler]) == null ? void 0 : _a.output.path;
   return i || j$1(i, "Could not find client entry in vinxi manifest"), r.assets.push({ tag: "script", attrs: { type: "module", suppressHydrationWarning: true, async: true }, children: `${p}import("${i}")` }), e;
 }
-function Y() {
-  const e = X();
+function V() {
+  const e = K();
   return { ...e, routes: Object.fromEntries(Object.entries(e.routes).map(([r, p]) => {
     const { preloads: n, assets: i } = p;
     return [r, { preloads: n, assets: i }];
   })) };
 }
-const Z = () => jsx(HeadContent, {}), ee = () => jsx(Scripts, {}), te = "/_build/assets/app-Dk303kxR.css", se = new QueryClient({ defaultOptions: { queries: { retry: 2, staleTime: 1e3 * 60 * 5 }, mutations: { retry: 2 } } }), re = () => jsx("div", { className: "fixed inset-0 flex items-center justify-center bg-gray-100/50", children: jsx("div", { className: "animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900" }) }), u = createRootRoute({ head: () => ({ meta: [{ charSet: "utf-8" }, { name: "viewport", content: "width=device-width, initial-scale=1" }, { title: "TanStack Start Starter" }], links: [{ rel: "stylesheet", href: te }] }), component: oe });
+const X = () => jsx(HeadContent, {}), ee = () => jsx(Scripts, {}), te = "/_build/assets/app-DCdd4NMP.css", se = new QueryClient({ defaultOptions: { queries: { retry: 2, staleTime: 1e3 * 60 * 5 }, mutations: { retry: 2 } } }), re = () => jsx("div", { className: "fixed inset-0 flex items-center justify-center bg-gray-100/50", children: jsx("div", { className: "animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900" }) }), u = createRootRoute({ head: () => ({ meta: [{ charSet: "utf-8" }, { name: "viewport", content: "width=device-width, initial-scale=1" }, { title: "TanStack Start Starter" }], links: [{ rel: "stylesheet", href: te }] }), component: oe });
 function oe() {
   const e = useRouterState({ select: (r) => r.isLoading });
   return jsx(QueryClientProvider, { client: se, children: jsxs(ae, { children: [e && jsx(re, {}), jsx(Outlet, {})] }) });
 }
 function ae({ children: e }) {
-  return jsxs("html", { lang: "en", children: [jsx("head", { children: jsx(Z, {}) }), jsxs("body", { children: [e, jsx(ee, {})] })] });
+  return jsxs("html", { lang: "en", children: [jsx("head", { children: jsx(X, {}) }), jsxs("body", { children: [e, jsx(ee, {})] })] });
 }
-const ne = () => import('../build/sign-in-DObYVqdW.mjs'), g = createFileRoute("/sign-in")({ component: lazyRouteComponent(ne, "component", () => g.ssr) }), ie = () => import('../build/reset-password-NE-D3iDd.mjs'), f = createFileRoute("/reset-password")({ component: lazyRouteComponent(ie, "component", () => f.ssr) }), pe = () => import('../build/forgot-password-CgVQ0AZo.mjs'), R = createFileRoute("/forgot-password")({ component: lazyRouteComponent(pe, "component", () => R.ssr) }), ue = () => import('../build/_labsquire-BspXxI4i.mjs'), _ = createFileRoute("/_labsquire")({ component: lazyRouteComponent(ue, "component", () => _.ssr) }), ce = () => import('../build/index-CdMbw2w4.mjs'), $ = createFileRoute("/")({ component: lazyRouteComponent(ce, "component", () => $.ssr) }), de = () => import('../build/update-password-CT9TQj3Z.mjs'), j = createFileRoute("/_labsquire/update-password")({ component: lazyRouteComponent(de, "component", () => j.ssr) }), le = () => import('../build/get-profile-CwZG9TIE.mjs'), h = createFileRoute("/_labsquire/get-profile")({ component: lazyRouteComponent(le, "component", () => h.ssr) }), me = () => import('../build/user-table-Dr3moyOM.mjs'), q = createFileRoute("/_labsquire/users/user-table")({ component: lazyRouteComponent(me, "component", () => q.ssr) }), be = () => import('../build/edit-user-form-qW1JUAKi.mjs'), P = createFileRoute("/_labsquire/users/edit-user-form")({ component: lazyRouteComponent(be, "component", () => P.ssr) }), ge = () => import('../build/add-user-CoMOtsqu.mjs'), x = createFileRoute("/_labsquire/users/add-user")({ component: lazyRouteComponent(ge, "component", () => x.ssr) }), fe = () => import('../build/get-task-stats-CCPbpruE.mjs'), I = createFileRoute("/_labsquire/tasks/get-task-stats")({ component: lazyRouteComponent(fe, "component", () => I.ssr) }), Re = () => import('../build/add-tasks-DOzKJXMr.mjs'), C = createFileRoute("/_labsquire/tasks/add-tasks")({ component: lazyRouteComponent(Re, "component", () => C.ssr) }), _e = () => import('../build/project-table-CvcOygil.mjs'), k = createFileRoute("/_labsquire/projects/project-table")({ component: lazyRouteComponent(_e, "component", () => k.ssr) }), $e = () => import('../build/add-project-NeOJyKaG.mjs'), w = createFileRoute("/_labsquire/projects/get-single-project/add-project")({ component: lazyRouteComponent($e, "component", () => w.ssr) }), je = () => import('../build/index-WJ_8OdWR.mjs'), S = createFileRoute("/_labsquire/projects/get-single-project/$projectId/")({ component: lazyRouteComponent(je, "component", () => S.ssr) }), he = () => import('../build/index1-BEfLdtsF.mjs'), y = createFileRoute("/_labsquire/projects/get-members/$projectId/index1")({ component: lazyRouteComponent(he, "component", () => y.ssr) }), qe = g.update({ id: "/sign-in", path: "/sign-in", getParentRoute: () => u }), Pe = f.update({ id: "/reset-password", path: "/reset-password", getParentRoute: () => u }), xe = R.update({ id: "/forgot-password", path: "/forgot-password", getParentRoute: () => u }), a = _.update({ id: "/_labsquire", getParentRoute: () => u }), Ie = $.update({ id: "/", path: "/", getParentRoute: () => u }), Ce = j.update({ id: "/update-password", path: "/update-password", getParentRoute: () => a }), ke = h.update({ id: "/get-profile", path: "/get-profile", getParentRoute: () => a }), we = q.update({ id: "/users/user-table", path: "/users/user-table", getParentRoute: () => a }), Se = P.update({ id: "/users/edit-user-form", path: "/users/edit-user-form", getParentRoute: () => a }), ye = x.update({ id: "/users/add-user", path: "/users/add-user", getParentRoute: () => a }), Te = I.update({ id: "/tasks/get-task-stats", path: "/tasks/get-task-stats", getParentRoute: () => a }), Le = C.update({ id: "/tasks/add-tasks", path: "/tasks/add-tasks", getParentRoute: () => a }), ve = k.update({ id: "/projects/project-table", path: "/projects/project-table", getParentRoute: () => a }), Me = w.update({ id: "/projects/get-single-project/add-project", path: "/projects/get-single-project/add-project", getParentRoute: () => a }), Ee = S.update({ id: "/projects/get-single-project/$projectId/", path: "/projects/get-single-project/$projectId/", getParentRoute: () => a }), Fe = y.update({ id: "/projects/get-members/$projectId/index1", path: "/projects/get-members/$projectId/index1", getParentRoute: () => a }), Ue = { LabsquireGetProfileRoute: ke, LabsquireUpdatePasswordRoute: Ce, LabsquireProjectsProjectTableRoute: ve, LabsquireTasksAddTasksRoute: Le, LabsquireTasksGetTaskStatsRoute: Te, LabsquireUsersAddUserRoute: ye, LabsquireUsersEditUserFormRoute: Se, LabsquireUsersUserTableRoute: we, LabsquireProjectsGetSingleProjectAddProjectRoute: Me, LabsquireProjectsGetMembersProjectIdIndex1Route: Fe, LabsquireProjectsGetSingleProjectProjectIdIndexRoute: Ee }, Ae = a._addFileChildren(Ue), Ge = { IndexRoute: Ie, LabsquireRoute: Ae, ForgotPasswordRoute: xe, ResetPasswordRoute: Pe, SignInRoute: qe }, He = u._addFileChildren(Ge)._addFileTypes();
-function Oe() {
+const ne = () => import('../build/sign-in-DObYVqdW.mjs'), f = createFileRoute("/sign-in")({ component: lazyRouteComponent(ne, "component", () => f.ssr) }), ie = () => import('../build/reset-password-NE-D3iDd.mjs'), g = createFileRoute("/reset-password")({ component: lazyRouteComponent(ie, "component", () => g.ssr) }), pe = () => import('../build/forgot-password-CgVQ0AZo.mjs'), R = createFileRoute("/forgot-password")({ component: lazyRouteComponent(pe, "component", () => R.ssr) }), ue = () => import('../build/_labsquire-BspXxI4i.mjs'), _ = createFileRoute("/_labsquire")({ component: lazyRouteComponent(ue, "component", () => _.ssr) }), ce = () => import('../build/index-CdMbw2w4.mjs'), $ = createFileRoute("/")({ component: lazyRouteComponent(ce, "component", () => $.ssr) }), de = () => import('../build/update-password-CT9TQj3Z.mjs'), h = createFileRoute("/_labsquire/update-password")({ component: lazyRouteComponent(de, "component", () => h.ssr) }), le = () => import('../build/get-profile-CwZG9TIE.mjs'), q = createFileRoute("/_labsquire/get-profile")({ component: lazyRouteComponent(le, "component", () => q.ssr) }), me = () => import('../build/user-table-Dr3moyOM.mjs'), j = createFileRoute("/_labsquire/users/user-table")({ component: lazyRouteComponent(me, "component", () => j.ssr) }), be = () => import('../build/edit-user-form-qW1JUAKi.mjs'), P = createFileRoute("/_labsquire/users/edit-user-form")({ component: lazyRouteComponent(be, "component", () => P.ssr) }), fe = () => import('../build/add-user-CoMOtsqu.mjs'), I = createFileRoute("/_labsquire/users/add-user")({ component: lazyRouteComponent(fe, "component", () => I.ssr) }), ge = () => import('../build/get-task-stats-CCPbpruE.mjs'), x = createFileRoute("/_labsquire/tasks/get-task-stats")({ component: lazyRouteComponent(ge, "component", () => x.ssr) }), Re = () => import('../build/add-tasks-DOzKJXMr.mjs'), C = createFileRoute("/_labsquire/tasks/add-tasks")({ component: lazyRouteComponent(Re, "component", () => C.ssr) }), _e = () => import('../build/project-table-7x3YQ3gq.mjs'), w = createFileRoute("/_labsquire/projects/project-table")({ component: lazyRouteComponent(_e, "component", () => w.ssr) }), $e = () => import('../build/add-project-NeOJyKaG.mjs'), k = createFileRoute("/_labsquire/projects/add-project")({ component: lazyRouteComponent($e, "component", () => k.ssr) }), he = () => import('../build/index-CZVf3ryT.mjs'), S = createFileRoute("/_labsquire/projects/get-single-project/$projectId/")({ component: lazyRouteComponent(he, "component", () => S.ssr) }), qe = () => import('../build/index1-BEfLdtsF.mjs'), y = createFileRoute("/_labsquire/projects/get-members/$projectId/index1")({ component: lazyRouteComponent(qe, "component", () => y.ssr) }), je = f.update({ id: "/sign-in", path: "/sign-in", getParentRoute: () => u }), Pe = g.update({ id: "/reset-password", path: "/reset-password", getParentRoute: () => u }), Ie = R.update({ id: "/forgot-password", path: "/forgot-password", getParentRoute: () => u }), a = _.update({ id: "/_labsquire", getParentRoute: () => u }), xe = $.update({ id: "/", path: "/", getParentRoute: () => u }), Ce = h.update({ id: "/update-password", path: "/update-password", getParentRoute: () => a }), we = q.update({ id: "/get-profile", path: "/get-profile", getParentRoute: () => a }), ke = j.update({ id: "/users/user-table", path: "/users/user-table", getParentRoute: () => a }), Se = P.update({ id: "/users/edit-user-form", path: "/users/edit-user-form", getParentRoute: () => a }), ye = I.update({ id: "/users/add-user", path: "/users/add-user", getParentRoute: () => a }), Te = x.update({ id: "/tasks/get-task-stats", path: "/tasks/get-task-stats", getParentRoute: () => a }), Le = C.update({ id: "/tasks/add-tasks", path: "/tasks/add-tasks", getParentRoute: () => a }), ve = w.update({ id: "/projects/project-table", path: "/projects/project-table", getParentRoute: () => a }), Me = k.update({ id: "/projects/add-project", path: "/projects/add-project", getParentRoute: () => a }), Ae = S.update({ id: "/projects/get-single-project/$projectId/", path: "/projects/get-single-project/$projectId/", getParentRoute: () => a }), Ue = y.update({ id: "/projects/get-members/$projectId/index1", path: "/projects/get-members/$projectId/index1", getParentRoute: () => a }), Ee = { LabsquireGetProfileRoute: we, LabsquireUpdatePasswordRoute: Ce, LabsquireProjectsAddProjectRoute: Me, LabsquireProjectsProjectTableRoute: ve, LabsquireTasksAddTasksRoute: Le, LabsquireTasksGetTaskStatsRoute: Te, LabsquireUsersAddUserRoute: ye, LabsquireUsersEditUserFormRoute: Se, LabsquireUsersUserTableRoute: ke, LabsquireProjectsGetMembersProjectIdIndex1Route: Ue, LabsquireProjectsGetSingleProjectProjectIdIndexRoute: Ae }, Fe = a._addFileChildren(Ee), Ge = { IndexRoute: xe, LabsquireRoute: Fe, ForgotPasswordRoute: Ie, ResetPasswordRoute: Pe, SignInRoute: je }, He = u._addFileChildren(Ge)._addFileTypes();
+function Ne() {
   return createRouter$2({ routeTree: He, scrollRestoration: true });
 }
-const Ve = createStartHandler({ createRouter: Oe, getRouterManifest: Y })(J);
+const Je = createStartHandler({ createRouter: Ne, getRouterManifest: V })(Y);
 
 const handlers = [
   { route: '', handler: _1iO8hc, lazy: false, middleware: true, method: undefined },
   { route: '/_server', handler: q$1, lazy: false, middleware: true, method: undefined },
-  { route: '/', handler: Ve, lazy: false, middleware: true, method: undefined }
+  { route: '/', handler: Je, lazy: false, middleware: true, method: undefined }
 ];
 
 function createNitroApp() {

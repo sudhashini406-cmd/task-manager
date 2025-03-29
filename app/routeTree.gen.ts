@@ -24,7 +24,7 @@ import { Route as LabsquireUsersAddUserImport } from './routes/_labsquire/users/
 import { Route as LabsquireTasksGetTaskStatsImport } from './routes/_labsquire/tasks/get-task-stats'
 import { Route as LabsquireTasksAddTasksImport } from './routes/_labsquire/tasks/add-tasks'
 import { Route as LabsquireProjectsProjectTableImport } from './routes/_labsquire/projects/project-table'
-import { Route as LabsquireProjectsGetSingleProjectAddProjectImport } from './routes/_labsquire/projects/get-single-project/add-project'
+import { Route as LabsquireProjectsAddProjectImport } from './routes/_labsquire/projects/add-project'
 import { Route as LabsquireProjectsGetSingleProjectProjectIdIndexImport } from './routes/_labsquire/projects/get-single-project/$projectId/index'
 import { Route as LabsquireProjectsGetMembersProjectIdIndex1Import } from './routes/_labsquire/projects/get-members/$projectId/index1'
 
@@ -112,10 +112,10 @@ const LabsquireProjectsProjectTableRoute =
     getParentRoute: () => LabsquireRoute,
   } as any)
 
-const LabsquireProjectsGetSingleProjectAddProjectRoute =
-  LabsquireProjectsGetSingleProjectAddProjectImport.update({
-    id: '/projects/get-single-project/add-project',
-    path: '/projects/get-single-project/add-project',
+const LabsquireProjectsAddProjectRoute =
+  LabsquireProjectsAddProjectImport.update({
+    id: '/projects/add-project',
+    path: '/projects/add-project',
     getParentRoute: () => LabsquireRoute,
   } as any)
 
@@ -186,6 +186,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LabsquireUpdatePasswordImport
       parentRoute: typeof LabsquireImport
     }
+    '/_labsquire/projects/add-project': {
+      id: '/_labsquire/projects/add-project'
+      path: '/projects/add-project'
+      fullPath: '/projects/add-project'
+      preLoaderRoute: typeof LabsquireProjectsAddProjectImport
+      parentRoute: typeof LabsquireImport
+    }
     '/_labsquire/projects/project-table': {
       id: '/_labsquire/projects/project-table'
       path: '/projects/project-table'
@@ -228,13 +235,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LabsquireUsersUserTableImport
       parentRoute: typeof LabsquireImport
     }
-    '/_labsquire/projects/get-single-project/add-project': {
-      id: '/_labsquire/projects/get-single-project/add-project'
-      path: '/projects/get-single-project/add-project'
-      fullPath: '/projects/get-single-project/add-project'
-      preLoaderRoute: typeof LabsquireProjectsGetSingleProjectAddProjectImport
-      parentRoute: typeof LabsquireImport
-    }
     '/_labsquire/projects/get-members/$projectId/index1': {
       id: '/_labsquire/projects/get-members/$projectId/index1'
       path: '/projects/get-members/$projectId/index1'
@@ -257,13 +257,13 @@ declare module '@tanstack/react-router' {
 interface LabsquireRouteChildren {
   LabsquireGetProfileRoute: typeof LabsquireGetProfileRoute
   LabsquireUpdatePasswordRoute: typeof LabsquireUpdatePasswordRoute
+  LabsquireProjectsAddProjectRoute: typeof LabsquireProjectsAddProjectRoute
   LabsquireProjectsProjectTableRoute: typeof LabsquireProjectsProjectTableRoute
   LabsquireTasksAddTasksRoute: typeof LabsquireTasksAddTasksRoute
   LabsquireTasksGetTaskStatsRoute: typeof LabsquireTasksGetTaskStatsRoute
   LabsquireUsersAddUserRoute: typeof LabsquireUsersAddUserRoute
   LabsquireUsersEditUserFormRoute: typeof LabsquireUsersEditUserFormRoute
   LabsquireUsersUserTableRoute: typeof LabsquireUsersUserTableRoute
-  LabsquireProjectsGetSingleProjectAddProjectRoute: typeof LabsquireProjectsGetSingleProjectAddProjectRoute
   LabsquireProjectsGetMembersProjectIdIndex1Route: typeof LabsquireProjectsGetMembersProjectIdIndex1Route
   LabsquireProjectsGetSingleProjectProjectIdIndexRoute: typeof LabsquireProjectsGetSingleProjectProjectIdIndexRoute
 }
@@ -271,14 +271,13 @@ interface LabsquireRouteChildren {
 const LabsquireRouteChildren: LabsquireRouteChildren = {
   LabsquireGetProfileRoute: LabsquireGetProfileRoute,
   LabsquireUpdatePasswordRoute: LabsquireUpdatePasswordRoute,
+  LabsquireProjectsAddProjectRoute: LabsquireProjectsAddProjectRoute,
   LabsquireProjectsProjectTableRoute: LabsquireProjectsProjectTableRoute,
   LabsquireTasksAddTasksRoute: LabsquireTasksAddTasksRoute,
   LabsquireTasksGetTaskStatsRoute: LabsquireTasksGetTaskStatsRoute,
   LabsquireUsersAddUserRoute: LabsquireUsersAddUserRoute,
   LabsquireUsersEditUserFormRoute: LabsquireUsersEditUserFormRoute,
   LabsquireUsersUserTableRoute: LabsquireUsersUserTableRoute,
-  LabsquireProjectsGetSingleProjectAddProjectRoute:
-    LabsquireProjectsGetSingleProjectAddProjectRoute,
   LabsquireProjectsGetMembersProjectIdIndex1Route:
     LabsquireProjectsGetMembersProjectIdIndex1Route,
   LabsquireProjectsGetSingleProjectProjectIdIndexRoute:
@@ -297,13 +296,13 @@ export interface FileRoutesByFullPath {
   '/sign-in': typeof SignInRoute
   '/get-profile': typeof LabsquireGetProfileRoute
   '/update-password': typeof LabsquireUpdatePasswordRoute
+  '/projects/add-project': typeof LabsquireProjectsAddProjectRoute
   '/projects/project-table': typeof LabsquireProjectsProjectTableRoute
   '/tasks/add-tasks': typeof LabsquireTasksAddTasksRoute
   '/tasks/get-task-stats': typeof LabsquireTasksGetTaskStatsRoute
   '/users/add-user': typeof LabsquireUsersAddUserRoute
   '/users/edit-user-form': typeof LabsquireUsersEditUserFormRoute
   '/users/user-table': typeof LabsquireUsersUserTableRoute
-  '/projects/get-single-project/add-project': typeof LabsquireProjectsGetSingleProjectAddProjectRoute
   '/projects/get-members/$projectId/index1': typeof LabsquireProjectsGetMembersProjectIdIndex1Route
   '/projects/get-single-project/$projectId': typeof LabsquireProjectsGetSingleProjectProjectIdIndexRoute
 }
@@ -316,13 +315,13 @@ export interface FileRoutesByTo {
   '/sign-in': typeof SignInRoute
   '/get-profile': typeof LabsquireGetProfileRoute
   '/update-password': typeof LabsquireUpdatePasswordRoute
+  '/projects/add-project': typeof LabsquireProjectsAddProjectRoute
   '/projects/project-table': typeof LabsquireProjectsProjectTableRoute
   '/tasks/add-tasks': typeof LabsquireTasksAddTasksRoute
   '/tasks/get-task-stats': typeof LabsquireTasksGetTaskStatsRoute
   '/users/add-user': typeof LabsquireUsersAddUserRoute
   '/users/edit-user-form': typeof LabsquireUsersEditUserFormRoute
   '/users/user-table': typeof LabsquireUsersUserTableRoute
-  '/projects/get-single-project/add-project': typeof LabsquireProjectsGetSingleProjectAddProjectRoute
   '/projects/get-members/$projectId/index1': typeof LabsquireProjectsGetMembersProjectIdIndex1Route
   '/projects/get-single-project/$projectId': typeof LabsquireProjectsGetSingleProjectProjectIdIndexRoute
 }
@@ -336,13 +335,13 @@ export interface FileRoutesById {
   '/sign-in': typeof SignInRoute
   '/_labsquire/get-profile': typeof LabsquireGetProfileRoute
   '/_labsquire/update-password': typeof LabsquireUpdatePasswordRoute
+  '/_labsquire/projects/add-project': typeof LabsquireProjectsAddProjectRoute
   '/_labsquire/projects/project-table': typeof LabsquireProjectsProjectTableRoute
   '/_labsquire/tasks/add-tasks': typeof LabsquireTasksAddTasksRoute
   '/_labsquire/tasks/get-task-stats': typeof LabsquireTasksGetTaskStatsRoute
   '/_labsquire/users/add-user': typeof LabsquireUsersAddUserRoute
   '/_labsquire/users/edit-user-form': typeof LabsquireUsersEditUserFormRoute
   '/_labsquire/users/user-table': typeof LabsquireUsersUserTableRoute
-  '/_labsquire/projects/get-single-project/add-project': typeof LabsquireProjectsGetSingleProjectAddProjectRoute
   '/_labsquire/projects/get-members/$projectId/index1': typeof LabsquireProjectsGetMembersProjectIdIndex1Route
   '/_labsquire/projects/get-single-project/$projectId/': typeof LabsquireProjectsGetSingleProjectProjectIdIndexRoute
 }
@@ -357,13 +356,13 @@ export interface FileRouteTypes {
     | '/sign-in'
     | '/get-profile'
     | '/update-password'
+    | '/projects/add-project'
     | '/projects/project-table'
     | '/tasks/add-tasks'
     | '/tasks/get-task-stats'
     | '/users/add-user'
     | '/users/edit-user-form'
     | '/users/user-table'
-    | '/projects/get-single-project/add-project'
     | '/projects/get-members/$projectId/index1'
     | '/projects/get-single-project/$projectId'
   fileRoutesByTo: FileRoutesByTo
@@ -375,13 +374,13 @@ export interface FileRouteTypes {
     | '/sign-in'
     | '/get-profile'
     | '/update-password'
+    | '/projects/add-project'
     | '/projects/project-table'
     | '/tasks/add-tasks'
     | '/tasks/get-task-stats'
     | '/users/add-user'
     | '/users/edit-user-form'
     | '/users/user-table'
-    | '/projects/get-single-project/add-project'
     | '/projects/get-members/$projectId/index1'
     | '/projects/get-single-project/$projectId'
   id:
@@ -393,13 +392,13 @@ export interface FileRouteTypes {
     | '/sign-in'
     | '/_labsquire/get-profile'
     | '/_labsquire/update-password'
+    | '/_labsquire/projects/add-project'
     | '/_labsquire/projects/project-table'
     | '/_labsquire/tasks/add-tasks'
     | '/_labsquire/tasks/get-task-stats'
     | '/_labsquire/users/add-user'
     | '/_labsquire/users/edit-user-form'
     | '/_labsquire/users/user-table'
-    | '/_labsquire/projects/get-single-project/add-project'
     | '/_labsquire/projects/get-members/$projectId/index1'
     | '/_labsquire/projects/get-single-project/$projectId/'
   fileRoutesById: FileRoutesById
@@ -446,13 +445,13 @@ export const routeTree = rootRoute
       "children": [
         "/_labsquire/get-profile",
         "/_labsquire/update-password",
+        "/_labsquire/projects/add-project",
         "/_labsquire/projects/project-table",
         "/_labsquire/tasks/add-tasks",
         "/_labsquire/tasks/get-task-stats",
         "/_labsquire/users/add-user",
         "/_labsquire/users/edit-user-form",
         "/_labsquire/users/user-table",
-        "/_labsquire/projects/get-single-project/add-project",
         "/_labsquire/projects/get-members/$projectId/index1",
         "/_labsquire/projects/get-single-project/$projectId/"
       ]
@@ -472,6 +471,10 @@ export const routeTree = rootRoute
     },
     "/_labsquire/update-password": {
       "filePath": "_labsquire/update-password.tsx",
+      "parent": "/_labsquire"
+    },
+    "/_labsquire/projects/add-project": {
+      "filePath": "_labsquire/projects/add-project.tsx",
       "parent": "/_labsquire"
     },
     "/_labsquire/projects/project-table": {
@@ -496,10 +499,6 @@ export const routeTree = rootRoute
     },
     "/_labsquire/users/user-table": {
       "filePath": "_labsquire/users/user-table.tsx",
-      "parent": "/_labsquire"
-    },
-    "/_labsquire/projects/get-single-project/add-project": {
-      "filePath": "_labsquire/projects/get-single-project/add-project.tsx",
       "parent": "/_labsquire"
     },
     "/_labsquire/projects/get-members/$projectId/index1": {

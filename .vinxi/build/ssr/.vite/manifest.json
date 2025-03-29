@@ -1,6 +1,6 @@
 {
   "C:/Users/sudhashini_enugula/Desktop/ProjectLabsquire18/app/styles/app.css": {
-    "file": "assets/app-Dk303kxR.css",
+    "file": "assets/app-DCdd4NMP.css",
     "src": "C:/Users/sudhashini_enugula/Desktop/ProjectLabsquire18/app/styles/app.css"
   },
   "_EditUserForm-BVyw8kU9.js": {
@@ -34,6 +34,12 @@
       "assets/get-profile-GNLSjkBZ.css"
     ]
   },
+  "app/routes/_labsquire/projects/add-project.tsx?tsr-split=component": {
+    "file": "assets/add-project-NeOJyKaG.js",
+    "name": "add-project",
+    "src": "app/routes/_labsquire/projects/add-project.tsx?tsr-split=component",
+    "isDynamicEntry": true
+  },
   "app/routes/_labsquire/projects/get-members/$projectId/index1.tsx?tsr-split=component": {
     "file": "assets/index1-BEfLdtsF.js",
     "name": "index1",
@@ -44,7 +50,7 @@
     ]
   },
   "app/routes/_labsquire/projects/get-single-project/$projectId/index.tsx?tsr-split=component": {
-    "file": "assets/index-WJ_8OdWR.js",
+    "file": "assets/index-CZVf3ryT.js",
     "name": "index",
     "src": "app/routes/_labsquire/projects/get-single-project/$projectId/index.tsx?tsr-split=component",
     "isDynamicEntry": true,
@@ -52,14 +58,8 @@
       "_GetMembers-CUvba0q7.js"
     ]
   },
-  "app/routes/_labsquire/projects/get-single-project/add-project.tsx?tsr-split=component": {
-    "file": "assets/add-project-NeOJyKaG.js",
-    "name": "add-project",
-    "src": "app/routes/_labsquire/projects/get-single-project/add-project.tsx?tsr-split=component",
-    "isDynamicEntry": true
-  },
   "app/routes/_labsquire/projects/project-table.tsx?tsr-split=component": {
-    "file": "assets/project-table-CvcOygil.js",
+    "file": "assets/project-table-7x3YQ3gq.js",
     "name": "project-table",
     "src": "app/routes/_labsquire/projects/project-table.tsx?tsr-split=component",
     "isDynamicEntry": true,
@@ -159,12 +159,12 @@
       "app/routes/_labsquire/tasks/get-task-stats.tsx?tsr-split=component",
       "app/routes/_labsquire/tasks/add-tasks.tsx?tsr-split=component",
       "app/routes/_labsquire/projects/project-table.tsx?tsr-split=component",
-      "app/routes/_labsquire/projects/get-single-project/add-project.tsx?tsr-split=component",
+      "app/routes/_labsquire/projects/add-project.tsx?tsr-split=component",
       "app/routes/_labsquire/projects/get-single-project/$projectId/index.tsx?tsr-split=component",
       "app/routes/_labsquire/projects/get-members/$projectId/index1.tsx?tsr-split=component"
     ],
     "assets": [
-      "assets/app-Dk303kxR.css"
+      "assets/app-DCdd4NMP.css"
     ]
   }
 }

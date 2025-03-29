@@ -1,1 +1,0 @@
-import{E as o}from"./EditUserForm-CG3GExWL.js";import"./client-CEzPjcs2.js";import"./useMutation-Cm7FsQBV.js";import"./utils-km2FGkQ4.js";import"./js.cookie-Cz0CWeBA.js";const n=o;export{n as component};

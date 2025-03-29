@@ -103,7 +103,7 @@ const ProjectTable = () => {
         <div className="flex gap-2">
           <button
             className="bg-green-500 text-white px-4 py-2 rounded-md"
-            onClick={() => navigate({ to: "/projects/project-table" })}
+            onClick={() => navigate({ to: "/projects/add-project" })}
           >
             + Add Project
           </button>

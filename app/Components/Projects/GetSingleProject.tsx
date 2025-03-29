@@ -60,7 +60,7 @@ const TaskCard = ({ task }: { task: Task }) => {
         isDragging ? "opacity-50" : "opacity-100"
       }`}
     >
-      <p className="font-semibold">{task.task_title}</p>
+      <p className="test-base font-semibold">{task.task_title}</p>
       <p className="text-sm text-gray-500">{task.task_ref_id}</p>
       <p className="text-sm text-gray-500">{task.task_priority}</p>
     </div>
@@ -79,9 +79,14 @@ const TaskColumn = ({ title, status, tasks, moveTask }: TaskColumnProps) => {
       drop(ref.current);
     }
   }, [drop]);
-  //add scrolling here
+  
   return (
-    <div ref={ref} className="p-3 bg-gray-100 rounded-lg">
+    <div
+      ref={ref}
+      className={`p-3 bg-gray-100 rounded-lg ${
+        tasks.length > 5 ? "h-64 overflow-y-auto" : ""
+      }`}
+    >
       <h3 className="font-bold mb-2">{title}</h3>
       <div className="space-y-2">
         {tasks.map((task) => (
@@ -90,6 +95,7 @@ const TaskColumn = ({ title, status, tasks, moveTask }: TaskColumnProps) => {
       </div>
     </div>
   );
+  
 };
 
 export const GetSingleProject = () => {
@@ -211,35 +217,45 @@ export const GetSingleProject = () => {
   if (error) return <p className="text-red-500">Error loading data</p>;
   return (
     <DndProvider backend={HTML5Backend}>
-      <div className="grid grid-cols-5 gap-4 mb-6">
+      <div className="grid grid-cols-5 gap-9 mb-9">
         <div className="bg-gray-200 p-4 text-center rounded-lg">
-          <h4 className="font-semibold">Total Tasks</h4>
+          <h4 className=" text-base font-semibold">Total Tasks</h4>
           <p className="text-lg font-bold">
+          <span className="text-2xl font-bold">
             {data?.taskStats?.total_tasks_count ?? "N/A"}
+            </span>
           </p>
         </div>
-        <div className="bg-blue-200 p-4 text-center rounded-lg">
-          <h4 className="font-semibold">To Do</h4>
+        <div className="bg-blue-200 p-4 text-leftrounded-lg">
+          <h4 className=" text-base  font-semibold">To Do</h4>
           <p className="text-lg font-bold">
+          <span className="text-2xl font-bold">
             {data?.taskStats?.task_todo_count ?? "N/A"}
+            </span>
           </p>
         </div>
         <div className="bg-yellow-200 p-4 text-center rounded-lg">
-          <h4 className="font-semibold">In Progress</h4>
+          <h4 className="text-base  font-semibold">In Progress</h4>
           <p className="text-lg font-bold">
+          <span className="text-2xl font-bold">
             {data?.taskStats?.task_inprogress_count ?? "N/A"}
+            </span>
           </p>
         </div>
         <div className="bg-red-200 p-4 text-center rounded-lg">
-          <h4 className="font-semibold">Overdue</h4>
+          <h4 className="text-base  font-semibold">Overdue</h4>
           <p className="text-lg font-bold">
+          <span className="text-2xl font-bold">
             {data?.taskStats?.task_overdue_count ?? "N/A"}
+            </span>
           </p>
         </div>
         <div className="bg-green-200 p-4 text-center rounded-lg">
-          <h4 className="font-semibold">Completed</h4>
+          <h4 className="text-base  font-semibold">Completed</h4>
           <p className="text-lg font-bold">
+          <span className="text-2xl font-bold">
             {data?.taskStats?.task_completed_count ?? "N/A"}
+            </span>
           </p>
         </div>
       </div>
