@@ -86,7 +86,9 @@ export const ForgotPasswordPage = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 text-center bg-white rounded-lg shadow-md">
+    //<div className="max-w-md mx-auto p-60 text-center bg-white rounded-lg shadow-md">
+      <div className="max-w-md p-6 text-center bg-white rounded-lg shadow-md absolute right-150 top-1/2 transform -translate-y-1/2">
+
       <h2 className="text-left text-black font-bold text-xl">
         Forgot Password
       </h2>

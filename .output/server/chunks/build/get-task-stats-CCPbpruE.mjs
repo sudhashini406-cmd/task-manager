@@ -1,8 +1,8 @@
 import { jsx, jsxs } from 'react/jsx-runtime';
 import { useQuery } from '@tanstack/react-query';
-import N from 'js-cookie';
+import x from 'js-cookie';
 
-const l = N.get("access_token"), c = async () => {
+const l = x.get("access_token"), c = async () => {
   const t = await fetch("https://dev-api-tm.labsquire.com/v3.0/tasks/tasks-stats", { method: "GET", headers: { "Content-Type": "application/json", Authorization: `Bearer ${l}` } });
   if (!t.ok) throw new Error("Failed to fetch task stats");
   return t.json();

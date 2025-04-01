@@ -1,6 +1,6 @@
 import { jsx, jsxs } from 'react/jsx-runtime';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import N from 'js-cookie';
+import x from 'js-cookie';
 import { useParams } from '@tanstack/react-router';
 import { useState, useMemo, useRef, useEffect } from 'react';
 import { O, _ } from './GetMembers-CUvba0q7.mjs';
@@ -8,7 +8,7 @@ import { useReactTable, getCoreRowModel, flexRender } from '@tanstack/react-tabl
 import { DndProvider, useDrop, useDrag } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 
-const D = N.get("access_token"), V = async (e) => {
+const D = x.get("access_token"), V = async (e) => {
   if (!e) throw new Error("Project ID is missing");
   const s = await fetch(`https://dev-api-tm.labsquire.com/v3.0/projects/${e}/user-groups`, { method: "GET", headers: { Authorization: `Bearer ${D}`, "Content-Type": "application/json" } });
   if (s.status == 404) return [];
@@ -30,7 +30,7 @@ const D = N.get("access_token"), V = async (e) => {
     m(false), r.length > 0 && u.mutate({ projectId: e != null ? e : "", members: r.map((a) => ({ user_id: a, role: "MEMBER" })) });
   }, O = useMemo(() => d ? d.map((r) => ({ group_id: r.group_id, group_name: r.group_name })) : [], [d]), h = useReactTable({ data: O, columns: E, getCoreRowModel: getCoreRowModel() });
   return f ? jsx("p", { className: "text-center text-gray-600", children: "Loading..." }) : g ? jsxs("p", { className: "text-center text-red-500", children: ["Error: ", g.message] }) : jsxs("div", { className: "p-6", children: [jsx("h3", { className: "text-xl font-semibold text-center mb-4", children: "Project User Groups" }), jsxs("div", { className: "mb-4", children: [jsx("button", { className: "mb-4 px-4 py-2 bg-green-500 text-white rounded-md", onClick: () => m(!i), children: "AddMembers" }), i && jsx(_, { onConfirm: v })] }), jsx("div", { className: "overflow-x-auto", children: jsxs("table", { className: "w-full border-collapse border border-gray-300", children: [jsx("thead", { className: "bg-gray-100", children: h.getHeaderGroups().map((r) => jsx("tr", { className: "border-b border-gray-300", children: r.headers.map((a) => jsx("th", { className: "px-4 py-2 text-left border border-gray-300", children: flexRender(a.column.columnDef.header, a.getContext()) }, a.id)) }, r.id)) }), jsx("tbody", { children: h.getRowModel().rows.map((r) => jsx("tr", { className: "hover:bg-gray-50 transition border-b border-gray-300", children: r.getVisibleCells().map((a) => jsx("td", { className: "px-4 py-2 border border-gray-300", children: flexRender(a.column.columnDef.cell, a.getContext()) }, a.id)) }, r.id)) })] }) })] });
-}, b = { projectDetails: (e) => `https://dev-api-tm.labsquire.com/v3.0/projects/${e}`, taskStats: (e) => `https://dev-api-tm.labsquire.com/v3.0/projects/${e}/task-stats`, taskTodo: (e, s, o) => `https://dev-api-tm.labsquire.com/v3.0/projects/${e}/tasks?page=${s}&page_size=${o}&status=TODO&order_by=created_at:asc`, taskInProgress: (e, s, o) => `https://dev-api-tm.labsquire.com/v3.0/projects/${e}/tasks?page=${s}&page_size=${o}&status=IN_PROGRESS&order_by=created_at:asc`, taskOverdue: (e, s, o) => `https://dev-api-tm.labsquire.com/v3.0/projects/${e}/tasks?page=${s}&page_size=${o}&status=OVER_DUE&order_by=created_at:asc`, taskCompleted: (e, s, o) => `https://dev-api-tm.labsquire.com/v3.0/projects/${e}/tasks?page=${s}&page_size=${o}&status=COMPLETED&order_by=created_at:asc`, updateTaskStatus: (e) => `https://dev-api-tm.labsquire.com/v3.0/tasks/${e}/status` }, A = N.get("access_token"), y = async (e) => {
+}, b = { projectDetails: (e) => `https://dev-api-tm.labsquire.com/v3.0/projects/${e}`, taskStats: (e) => `https://dev-api-tm.labsquire.com/v3.0/projects/${e}/task-stats`, taskTodo: (e, s, o) => `https://dev-api-tm.labsquire.com/v3.0/projects/${e}/tasks?page=${s}&page_size=${o}&status=TODO&order_by=created_at:asc`, taskInProgress: (e, s, o) => `https://dev-api-tm.labsquire.com/v3.0/projects/${e}/tasks?page=${s}&page_size=${o}&status=IN_PROGRESS&order_by=created_at:asc`, taskOverdue: (e, s, o) => `https://dev-api-tm.labsquire.com/v3.0/projects/${e}/tasks?page=${s}&page_size=${o}&status=OVER_DUE&order_by=created_at:asc`, taskCompleted: (e, s, o) => `https://dev-api-tm.labsquire.com/v3.0/projects/${e}/tasks?page=${s}&page_size=${o}&status=COMPLETED&order_by=created_at:asc`, updateTaskStatus: (e) => `https://dev-api-tm.labsquire.com/v3.0/tasks/${e}/status` }, A = x.get("access_token"), y = async (e) => {
   const s = await fetch(e, { method: "GET", headers: { "Content-Type": "application/json", Authorization: `Bearer ${A}` } });
   if (!s.ok) throw new Error("Failed to fetch data");
   return s.json();

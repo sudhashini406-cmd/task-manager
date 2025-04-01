@@ -1,29 +1,35 @@
-//we can direct import from saveas  //npm i --save-dev @types/file-saver
-export const exportToCSV = (data: any[], filename = "projects.csv") => {
+
+export const exportToCSV = (data) => {
   if (!data || data.length === 0) {
-    alert("No data available for export!");
+    console.error("No data to export");
     return;
   }
 
-  const headers = Object.keys(data[0]).join(",");
+  const csvData = data.map((project) => ({
+    Code: project.code || "N/A",
+    Title: project.title || "N/A",
+    Description: project.description || "N/A",
+    Status: project.status === true || project.status === "true" ? "Active" : "Inactive",
+    // "Created On": project.created_on
+    //   ? new Date(project.created_on).toLocaleDateString("en-GB") // Format date as DD-MM-YYYY
+    //   : "N/A",
+  }));
 
-  // Convert data to CSV format
+  console.log("CSV Data:", csvData); // Debugging
+  
   const csvContent =
-    headers + // headers contain column names
-    "\n" +
-    data.map((row) => Object.values(row).join(",")).join("\n");
+    "data:text/csv;charset=utf-8," +
+    [
+      ["Code", "Title", "Description", "Status"],
+      ...csvData.map((row) =>
+        [row.Code, row.Title, row.Description, row.Status].join(",")
+      ),
+    ].join("\n");
 
-  const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
-
+  const encodedUri = encodeURI(csvContent);
   const link = document.createElement("a");
-  const url = URL.createObjectURL(blob);
-
-  link.href = url;
-  link.setAttribute("download", filename);
+  link.setAttribute("href", encodedUri);
+  link.setAttribute("download", "projects.csv");
   document.body.appendChild(link);
   link.click();
-
-  //  Remove the element and revoke the URL
-  document.body.removeChild(link);
-  URL.revokeObjectURL(url);
 };

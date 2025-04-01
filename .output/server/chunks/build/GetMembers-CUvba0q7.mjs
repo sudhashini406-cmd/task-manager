@@ -3,10 +3,10 @@ import { useQueryClient, useQuery, useMutation } from '@tanstack/react-query';
 import { useParams } from '@tanstack/react-router';
 import { useState, useMemo, useCallback } from 'react';
 import { useReactTable, getCoreRowModel, flexRender } from '@tanstack/react-table';
-import N from 'js-cookie';
+import x from 'js-cookie';
 
 const $ = async () => {
-  const e = N.get("access_token");
+  const e = x.get("access_token");
   if (!e) throw new Error("Authentication token not found");
   const t = await fetch("https://dev-api-tm.labsquire.com/v3.0/users/all?include_admins=true", { method: "GET", headers: { Authorization: `Bearer ${e}`, "Content-Type": "application/json" } });
   if (!t.ok) throw new Error("Failed to fetch users");
@@ -16,7 +16,7 @@ const $ = async () => {
     p((m) => m.includes(a) ? m.filter((y) => y !== a) : [...m, a]);
   }, []), b = useMemo(() => t ? t.map((a) => ({ id: a.id, name: `${a.fname} ${a.lname}` })).filter((a) => a.name.toLowerCase().includes(d.toLowerCase())) : [], [t, d]);
   return n ? jsx("p", { className: "text-center text-gray-600", children: "Loading..." }) : l ? jsxs("p", { className: "text-center text-red-500", children: ["Error: ", l.message] }) : jsxs("div", { className: "p-6 bg-white shadow-md rounded-lg w-96", children: [jsx("h3", { className: "text-xl font-semibold text-center mb-4", children: "Select Members" }), jsx("input", { type: "text", placeholder: "Search by name...", className: "w-full p-2 border border-gray-300 rounded-md mb-4", value: d, onChange: (a) => h(a.target.value) }), jsx("div", { className: "max-h-60 overflow-y-auto border border-gray-300 rounded-md p-2", children: b.length > 0 ? b.map((a) => jsxs("label", { className: "flex items-center gap-3 p-2 hover:bg-gray-100 rounded-md cursor-pointer", children: [jsx("input", { type: "checkbox", className: "w-4 h-4", checked: i.includes(a.id), onChange: () => f(a.id) }), jsx("span", { className: "text-gray-700", children: a.name })] }, a.id)) : jsx("p", { className: "text-gray-500 text-center", children: "No users found" }) }), jsxs("div", { className: "mt-4 flex justify-between", children: [jsx("button", { onClick: () => p([]), className: "px-4 py-2 bg-gray-400 text-white rounded-md", children: "Clear" }), jsx("button", { onClick: () => e(i), className: "px-4 py-2 bg-blue-600 text-white rounded-md", children: "Confirm" })] })] });
-}, w = N.get("access_token"), K = async (e) => {
+}, w = x.get("access_token"), K = async (e) => {
   if (!e) throw new Error("Project ID is missing");
   const t = await fetch(`https://dev-api-tm.labsquire.com/v3.0/projects/${e}/members`, { method: "GET", headers: { Authorization: `Bearer ${w}`, "Content-Type": "application/json" } });
   if (!t.ok) throw new Error("Failed to fetch project members");

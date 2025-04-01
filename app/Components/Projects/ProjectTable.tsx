@@ -24,7 +24,8 @@ const fetchProjects = async ({
 
   try {
     const response = await fetch(
-      import.meta.env.VITE_API_URL+`/projects/all?page=${page}&page_size=${pageSize}&search_string=${search}&status=${status}&order_by=${orderBy}`,
+      import.meta.env.VITE_API_URL +
+        `/projects/all?page=${page}&page_size=${pageSize}&search_string=${search}&status=${status}&order_by=${orderBy}`,
       {
         method: "GET",
         headers: {
@@ -41,7 +42,6 @@ const fetchProjects = async ({
     return [];
   }
 };
-
 const ProjectTable = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [page, setPage] = useState(1);
@@ -56,6 +56,7 @@ const ProjectTable = () => {
     isLoading,
     error,
     refetch,
+    isSuccess,
   } = useQuery({
     queryKey: ["projects", page, pageSize, search, status, orderBy],
     queryFn: () => fetchProjects({ page, pageSize, search, status, orderBy }),
@@ -63,7 +64,8 @@ const ProjectTable = () => {
 
   const handleExport = () => {
     const exportUrl =
-      import.meta.env.VITE_API_URL+`/projects/export?status=${status}&search_string=${search}&order_by=${orderBy}`;
+      import.meta.env.VITE_API_URL +
+      `/projects/export?status=${status}&search_string=${search}&order_by=${orderBy}`;
     window.open(exportUrl, "_blank");
   };
 
@@ -115,6 +117,7 @@ const ProjectTable = () => {
           </button>
         </div>
       </div>
+
       <div className="max-h-[500px] overflow-auto border p-4 rounded-lg">
         <div className="grid grid-cols-4 gap-4">
           {data.length > 0 ? (
@@ -204,7 +207,7 @@ const ProjectTable = () => {
           >
             Previous
           </button>
-          <span>Page {page} 1 2 3 4 ..</span>
+          <span>Page {page} </span>
 
           <button
             onClick={() => setPage(page + 1)}
@@ -214,6 +217,12 @@ const ProjectTable = () => {
           </button>
         </div>
       </div>
+      {isSuccess && data.length > 0 && (
+        <div className="mt-4 text-lg font-semibold">
+          Total Projects: {data.length}
+        </div>
+      )}
+
       {selectedProject && (
         <EditProject
           project={selectedProject}

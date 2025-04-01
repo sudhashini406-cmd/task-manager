@@ -121,6 +121,7 @@ export interface UserFormInputs {
   password: string;
   user_type: string;
   phone_number: string;
+  country_code: string; 
 }
 //EditUserForm.tsx
 export interface EditUserFormProps {

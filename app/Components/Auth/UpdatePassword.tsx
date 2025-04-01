@@ -165,6 +165,7 @@ export const UpdatePassword: React.FC = () => {
                 {passwordReqs.uppercase ? "✅" : "❌"} At least one uppercase
                 letter (A-Z)
               </p>
+              
               <p
                 className={
                   passwordReqs.lowercase ? "text-green-500" : "text-gray-500"

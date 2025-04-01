@@ -1,9 +1,9 @@
 import { jsxs, jsx } from 'react/jsx-runtime';
 import { useState, useEffect } from 'react';
 import { useQueryClient, useMutation } from '@tanstack/react-query';
-import N from 'js-cookie';
+import x from 'js-cookie';
 
-const p = N.get("access_token"), q = ({ project: s, onClose: u, onUpdate: h }) => {
+const p = x.get("access_token"), q = ({ project: s, onClose: u, onUpdate: h }) => {
   const [r, m] = useState({ fname: "", lname: "", email: "", phone_number: "", designation: "", user_type: "user" });
   useEffect(() => {
     s && m({ fname: s.fname || "", lname: s.lname || "", email: s.email || "", phone_number: s.phone_number || "", designation: s.designation || "", user_type: s.user_type || "user" });

@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import Cookies from "js-cookie";
 import { useReactTable, getCoreRowModel } from "@tanstack/react-table";
 import { EditUserForm } from "./EditUserForm";
-import { exportToCSV } from "../Projects/ExportCsv";
+import { exportToCSV } from "./ExportCsv1";
 import { useNavigate } from "@tanstack/react-router";
 
 import React from "react";
@@ -299,17 +299,17 @@ const UserTable = () => {
           Export
         </button>
 
-        <select
+         {/* <select
           value={limit}
           onChange={(e) => setLimit(Number(e.target.value))}
           className="border p-2"
         >
-          {[12, 25, 50, 150, 200, 250].map((size) => (
+          {[12, 25, 50, 150, 200, 250,500].map((size) => (
             <option key={size} value={size}>
               {size} / Page
             </option>
           ))}
-        </select>
+        </select>  */}
       </div>
 
       <table className="min-w-full border">
@@ -378,6 +378,23 @@ const UserTable = () => {
           Next
         </button>
       </div>
+      <select
+          value={limit}
+          onChange={(e) => setLimit(Number(e.target.value))}
+          className="border p-2"
+        >
+          {[12, 25, 50, 150, 200, 250,500].map((size) => (
+            <option key={size} value={size}>
+              {size} / Page
+            </option>
+
+          ))}</select>
+      <tr className="bg-gray-100">
+    <td colSpan={columns.length} className="text-right font-bold p-2">
+      Total Users: {totalRecords}
+    </td>
+  </tr>
+
 
       {selectedProject && (
         <EditUserForm

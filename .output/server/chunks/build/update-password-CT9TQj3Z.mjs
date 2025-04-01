@@ -2,11 +2,11 @@ import { jsxs, jsx } from 'react/jsx-runtime';
 import { useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
 import { useNavigate } from '@tanstack/react-router';
-import N from 'js-cookie';
+import x from 'js-cookie';
 import { Eye, EyeOff, ArrowLeft } from 'lucide-react';
 
 const q = {}, j = q + "/users/update-password", R = (a) => ({ length: a.length >= 8, uppercase: /[A-Z]/.test(a), lowercase: /[a-z]/.test(a), number: /[0-9]/.test(a), specialChar: /[!@#$%^&*]/.test(a) }), U = async (a) => {
-  const c = N.get("access_token");
+  const c = x.get("access_token");
   if (!c) throw new Error("401: No token found. Please log in again.");
   const i = await fetch(j, { method: "PATCH", headers: { "Content-Type": "application/json", Authorization: `Bearer ${c}` }, body: JSON.stringify(a) }), t = await i.json();
   if (i.status === 401) throw new Error("401: Provided current password is wrong.");

@@ -1,10 +1,10 @@
 import { jsxs, jsx } from 'react/jsx-runtime';
 import { useState } from 'react';
 import { useQueryClient, useQuery, useMutation } from '@tanstack/react-query';
-import N from 'js-cookie';
+import x from 'js-cookie';
 import { useNavigate } from '@tanstack/react-router';
 
-const h = N.get("access_token"), K = async () => {
+const h = x.get("access_token"), K = async () => {
   const s = await fetch("https://dev-api-tm.labsquire.com/v3.0/projects/projects-all", { method: "GET", headers: { "Content-Type": "application/json", Authorization: `Bearer ${h}` } });
   if (!s.ok) throw new Error("Failed to fetch projects");
   return s.json();

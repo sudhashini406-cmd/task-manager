@@ -1,14 +1,14 @@
 import { jsx, jsxs } from 'react/jsx-runtime';
 import { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import N from 'js-cookie';
+import x from 'js-cookie';
 import { ArrowLeft, Pencil } from 'lucide-react';
 import { toast, ToastContainer } from 'react-toastify';
 import { useNavigate } from '@tanstack/react-router';
 
 const U = "https://dev-api-tm.labsquire.com/v3.0/files/upload?is_public=true", T = "https://dev-api-tm.labsquire.com/v3.0/users/11/profile-pic", A = () => {
   const i = useQueryClient(), [a, n] = useState(""), [y, m] = useState(false), p = async (r) => {
-    const t = N.get("access_token"), u = `Bearer ${t}`;
+    const t = x.get("access_token"), u = `Bearer ${t}`;
     if (!t) throw new Error("Authentication error: Please log in again.");
     m(true);
     try {
@@ -21,7 +21,7 @@ const U = "https://dev-api-tm.labsquire.com/v3.0/files/upload?is_public=true", T
       m(false);
     }
   }, l = useMutation({ mutationFn: async (r) => {
-    const t = await p(r), u = N.get("access_token");
+    const t = await p(r), u = x.get("access_token");
     console.log(u);
     const d = `Bearer ${u}`, s = await fetch(T, { method: "PATCH", headers: { Authorization: d, "Content-Type": "application/json" }, body: JSON.stringify({ profile_pic: t }) });
     if (!s.ok) throw new Error("Error updating profile picture: ${updateResponse.statusText}");
@@ -37,13 +37,13 @@ const U = "https://dev-api-tm.labsquire.com/v3.0/files/upload?is_public=true", T
     t && l.mutate(t);
   } })] }) });
 }, v = "https://dev-api-tm.labsquire.com/v3.0/users/11", S = async () => {
-  const i = N.get("access_token");
+  const i = x.get("access_token");
   if (!i) throw new Error("No token found. Please log in again.");
   const a = await fetch(v, { method: "GET", headers: { Authorization: `Bearer ${i}`, Accept: "application/json" } });
   if (!a.ok) throw new Error(`Error ${a.status}: ${a.statusText}`);
   return a.json();
 }, j = async (i) => {
-  const a = N.get("access_token");
+  const a = x.get("access_token");
   if (!a) throw new Error("No token found. Please log in again.");
   const n = await fetch(v, { method: "PATCH", headers: { "Content-Type": "application/json", Authorization: `Bearer ${a}` }, body: JSON.stringify(i) });
   if (!n.ok) throw new Error(`Error ${n.status}: ${n.statusText}`);

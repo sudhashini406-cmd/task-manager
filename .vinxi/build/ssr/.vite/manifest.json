@@ -1,22 +1,18 @@
 {
   "C:/Users/sudhashini_enugula/Desktop/ProjectLabsquire18/app/styles/app.css": {
-    "file": "assets/app-DCdd4NMP.css",
+    "file": "assets/app-xbMs25RY.css",
     "src": "C:/Users/sudhashini_enugula/Desktop/ProjectLabsquire18/app/styles/app.css"
   },
   "_EditUserForm-BVyw8kU9.js": {
     "file": "assets/EditUserForm-BVyw8kU9.js",
     "name": "EditUserForm"
   },
-  "_ExportCsv-Cxm1M38I.js": {
-    "file": "assets/ExportCsv-Cxm1M38I.js",
-    "name": "ExportCsv"
-  },
   "_GetMembers-CUvba0q7.js": {
     "file": "assets/GetMembers-CUvba0q7.js",
     "name": "GetMembers"
   },
-  "_SignIn-C0fgN4Ub.js": {
-    "file": "assets/SignIn-C0fgN4Ub.js",
+  "_SignIn-85yXu8KM.js": {
+    "file": "assets/SignIn-85yXu8KM.js",
     "name": "SignIn"
   },
   "app/routes/_labsquire.tsx?tsr-split=component": {
@@ -59,13 +55,10 @@
     ]
   },
   "app/routes/_labsquire/projects/project-table.tsx?tsr-split=component": {
-    "file": "assets/project-table-7x3YQ3gq.js",
+    "file": "assets/project-table-BYbS96yg.js",
     "name": "project-table",
     "src": "app/routes/_labsquire/projects/project-table.tsx?tsr-split=component",
-    "isDynamicEntry": true,
-    "imports": [
-      "_ExportCsv-Cxm1M38I.js"
-    ]
+    "isDynamicEntry": true
   },
   "app/routes/_labsquire/tasks/add-tasks.tsx?tsr-split=component": {
     "file": "assets/add-tasks-DOzKJXMr.js",
@@ -86,7 +79,7 @@
     "isDynamicEntry": true
   },
   "app/routes/_labsquire/users/add-user.tsx?tsr-split=component": {
-    "file": "assets/add-user-CoMOtsqu.js",
+    "file": "assets/add-user-ArEn5gjQ.js",
     "name": "add-user",
     "src": "app/routes/_labsquire/users/add-user.tsx?tsr-split=component",
     "isDynamicEntry": true
@@ -101,28 +94,27 @@
     ]
   },
   "app/routes/_labsquire/users/user-table.tsx?tsr-split=component": {
-    "file": "assets/user-table-Dr3moyOM.js",
+    "file": "assets/user-table-DCoDetUq.js",
     "name": "user-table",
     "src": "app/routes/_labsquire/users/user-table.tsx?tsr-split=component",
     "isDynamicEntry": true,
     "imports": [
-      "_EditUserForm-BVyw8kU9.js",
-      "_ExportCsv-Cxm1M38I.js"
+      "_EditUserForm-BVyw8kU9.js"
     ]
   },
   "app/routes/forgot-password.tsx?tsr-split=component": {
-    "file": "assets/forgot-password-CgVQ0AZo.js",
+    "file": "assets/forgot-password-WHORMwZ5.js",
     "name": "forgot-password",
     "src": "app/routes/forgot-password.tsx?tsr-split=component",
     "isDynamicEntry": true
   },
   "app/routes/index.tsx?tsr-split=component": {
-    "file": "assets/index-CdMbw2w4.js",
+    "file": "assets/index-C9-JsaFU.js",
     "name": "index",
     "src": "app/routes/index.tsx?tsr-split=component",
     "isDynamicEntry": true,
     "imports": [
-      "_SignIn-C0fgN4Ub.js"
+      "_SignIn-85yXu8KM.js"
     ]
   },
   "app/routes/reset-password.tsx?tsr-split=component": {
@@ -132,12 +124,12 @@
     "isDynamicEntry": true
   },
   "app/routes/sign-in.tsx?tsr-split=component": {
-    "file": "assets/sign-in-DObYVqdW.js",
+    "file": "assets/sign-in-CoK22Hzi.js",
     "name": "sign-in",
     "src": "app/routes/sign-in.tsx?tsr-split=component",
     "isDynamicEntry": true,
     "imports": [
-      "_SignIn-C0fgN4Ub.js"
+      "_SignIn-85yXu8KM.js"
     ]
   },
   "virtual:$vinxi/handler/ssr": {
@@ -164,7 +156,7 @@
       "app/routes/_labsquire/projects/get-members/$projectId/index1.tsx?tsr-split=component"
     ],
     "assets": [
-      "assets/app-DCdd4NMP.css"
+      "assets/app-xbMs25RY.css"
     ]
   }
 }

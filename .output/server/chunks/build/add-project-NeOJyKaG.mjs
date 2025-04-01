@@ -1,11 +1,11 @@
 import { jsxs, jsx } from 'react/jsx-runtime';
 import { useState } from 'react';
 import { useQueryClient, useMutation } from '@tanstack/react-query';
-import N$1 from 'js-cookie';
+import x from 'js-cookie';
 import { useNavigate } from '@tanstack/react-router';
 
 const N = async (o) => {
-  const a = N$1.get("access_token");
+  const a = x.get("access_token");
   if (!a) throw new Error("Authorization Token Missing. Please log in.");
   const r = await fetch("https://dev-api-tm.labsquire.com/v3.0/projects", { method: "POST", headers: { "Content-Type": "application/json", Authorization: `Bearer ${a}` }, body: JSON.stringify(o) });
   if (!r.ok) {
