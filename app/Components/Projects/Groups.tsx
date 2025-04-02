@@ -136,7 +136,7 @@ export const ProjectGroups = () => {
     if (selectedUsers.length > 0) {
       addMutation.mutate({
         projectId: projectId ?? "",
-        members: selectedUsers.map((userId) => ({
+    members: selectedUsers.map((userId) => ({
           user_id: userId,
           role: "MEMBER",
         })),
@@ -161,7 +161,7 @@ export const ProjectGroups = () => {
 
   if (isLoading) return <p className="text-center text-gray-600">Loading...</p>;
   if (error)
-    return <p className="text-center text-red-500">Error: {error.message}</p>;
+    return <p className="text-center text-red-500">Error: {(error as Error).message}</p>;
 
   return (
     <div className="p-6">

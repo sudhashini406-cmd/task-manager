@@ -43,7 +43,8 @@ const TaskStats = () => {
           color: "red",
         }}
       >
-        <strong>Error:</strong> {error.message}
+       <strong>Error:</strong> {(error as Error).message}
+
       </div>
     );
 

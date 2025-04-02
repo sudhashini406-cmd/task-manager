@@ -98,11 +98,24 @@ export interface UpdateTaskPayload {
 export interface  ProjectGroup{
   projectId: string;
   groupId: number;
+
  
 }
 export interface Member{
-  members?: { user_id: number; role: string }[];
+  //members?: { user_id: number; role: string }[];
+  //members: string[];
+  members: { id: string }[];
 }
+
+export interface ProjectGroup {
+  projectId: string;
+  groupId: number;
+}
+
+export interface ProjectGroupWithMembers extends ProjectGroup {
+  members: { id: string }[];
+}
+
 //projectTable.tsx
 export interface FetchProjectParams {
   page: number;

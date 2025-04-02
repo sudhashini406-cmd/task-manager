@@ -91,7 +91,9 @@ const AddTask = () => {
       queryClient.invalidateQueries({ queryKey: ["tags"] });
     },
     onError: (error) => {
-      alert("Error submitting task: " + error.message);
+      //alert("Error submitting task: " + error.message);
+      alert("Error submitting task: " + (error as Error).message);
+
     },
   });
 
@@ -148,7 +150,7 @@ const AddTask = () => {
 
       {(loadingProjects || loadingTags) && <p>Loading...</p>}
 
-      {projectsError && (
+      {/* {projectsError && (
         <div className="p-4 border border-red-500 bg-red-100 text-red-700 mb-3">
           <strong>Error:</strong> {projectsError.message}
         </div>
@@ -157,7 +159,18 @@ const AddTask = () => {
         <div className="p-4 border border-red-500 bg-red-100 text-red-700 mb-3">
           <strong>Error:</strong> {tagsError.message}
         </div>
-      )}
+      )} */}
+      {projectsError instanceof Error && (
+  <div className="p-4 border border-red-500 bg-red-100 text-red-700 mb-3">
+    <strong>Error:</strong> {projectsError.message}
+  </div>
+)}
+{tagsError instanceof Error && (
+  <div className="p-4 border border-red-500 bg-red-100 text-red-700 mb-3">
+    <strong>Error:</strong> {tagsError.message}
+  </div>
+)}
+
       <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
         <div>
           <label className="block font-semibold">

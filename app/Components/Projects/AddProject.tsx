@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import  React from "react";
+import { useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import Cookies from "js-cookie";
 import { useNavigate } from "@tanstack/react-router";
@@ -27,7 +28,7 @@ const createProject = async (projectData: any) => {
   return response.json();
 };
 
-const AddProjectForm = () => {
+const AddProjectForm = ({ onProjectAdded }: { onProjectAdded?: () => void }) => {
   const [formData, setFormData] = useState({
     title: "",
     code: "",
@@ -54,15 +55,44 @@ const AddProjectForm = () => {
         project_members: [],
       });
       setErrors({});
+      localStorage.setItem("ProjectSuccessMsg","project added successfully");
+
+      // Invalidate query to refresh project list
       queryClient.invalidateQueries({ queryKey: ["projects"] });
+      navigate({to:"/projects/project-table"});
+     
+
+      if (onProjectAdded) {
+        onProjectAdded();
+      }
     },
-    onError: (error) => {
-      alert("Error: " + error.message);
+    // onError: (error) => {
+    //   alert("Error: " + error.message);
+    // },/
+
+    onError: (error: any) => {
+      if (error.message.includes("Project title already exists")) {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          title: "Project title already exists",
+        }));
+      } 
+      else if(error.message.includes("Project code already exists"))
+        {
+          setErrors((prevErrors)=>({
+            ...prevErrors,
+            code:"Project code already exists",
+          }));
+        }else {
+        alert("Error: " + error.message);
+      }
     },
+    
   });
-  const handleChange = (e: any) => {
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prev) => ({ ...prev, [name]: value }));
 
     if (value.trim() !== "") {
       setErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
@@ -78,7 +108,7 @@ const AddProjectForm = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (validateForm()) {
       mutation.mutate(formData);
@@ -151,7 +181,7 @@ const AddProjectForm = () => {
             disabled={mutation.isPending}
             className="px-4 py-2 bg-blue-600 text-white rounded"
           >
-            {mutation.isPending ? "Adding..." : "Add Project"}
+            {mutation.isPending ? "Adding..." : "Add Project"} 
           </button>
         </div>
       </form>
@@ -159,3 +189,4 @@ const AddProjectForm = () => {
   );
 };
 export default AddProjectForm;
+

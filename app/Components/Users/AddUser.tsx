@@ -82,10 +82,9 @@ function AddUser({
       const jsonResponse = await response.json();
       return jsonResponse;
     },
-    onSuccess: async (data) => {
+   onSuccess: async (data) => {
       const newUser = {
         id: data.id,
-        //ig:data?.id,
         firstName: data.fname,
         lastName: data.lname,
         email: data.email,
@@ -93,15 +92,21 @@ function AddUser({
         mobile: data.phone_number,
         type: data.user_type,
       };
+    
       onUserAdded(newUser);
       setPopupMessage("User added successfully!");
       setShowPopup(true);
-
-      setTimeout(() => setShowPopup(false), 50000);
-
+   
+      //navigate("/users/user-table");
+     
+    
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 4000);
+    
       onClose();
-      navigate({ to: "/users/user-table" });
     },
+    
     onSettled: () => setLoading(false),
   });
 

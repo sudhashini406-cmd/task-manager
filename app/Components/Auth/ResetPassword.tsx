@@ -287,7 +287,7 @@ export function ResetPassword() {
               cursor: "pointer",
               fontSize: "16px",
             }}
-            disabled={resetPasswordMutation.isPending}
+            disabled={resetPasswordMutation.isPending}//replace isPending with isLoading
           >
             {resetPasswordMutation.isPending
               ? "Resetting..."

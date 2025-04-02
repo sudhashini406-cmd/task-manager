@@ -212,7 +212,7 @@ export const EditUserForm = ({
               className="bg-blue-500 text-white px-4 py-2 rounded"
               disabled={updateUserMutation.isPending}
             >
-              {updateUserMutation.isPending ? "Saving..." : "Save Changes"}
+              {updateUserMutation.isPending? "Saving..." : "Save Changes"}
             </button>
           </div>
         </form>

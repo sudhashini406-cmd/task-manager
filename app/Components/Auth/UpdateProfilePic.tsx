@@ -89,7 +89,9 @@ const ProfilePicUploader = () => {
       setErrorMessage("");
     },
     onError: (error) => {
-      setErrorMessage(error.message);
+      //setErrorMessage(error.message);
+      setErrorMessage((error as Error).message);
+
     },
   });
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {

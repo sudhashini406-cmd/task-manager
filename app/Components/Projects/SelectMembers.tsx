@@ -58,7 +58,7 @@ export const SelectMembers = ({
 
   if (isLoading) return <p className="text-center text-gray-600">Loading...</p>;
   if (error)
-    return <p className="text-center text-red-500">Error: {error.message}</p>;
+    return <p className="text-center text-red-500">Error: {(error as Error).message}</p>;
 
   return (
     <div className="p-6 bg-white shadow-md rounded-lg w-96">

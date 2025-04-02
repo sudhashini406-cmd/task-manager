@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import Cookies from "js-cookie";
 import EditProject from "./EditProject";
@@ -26,7 +27,8 @@ const fetchProjects = async ({
     const response = await fetch(
       import.meta.env.VITE_API_URL +
         `/projects/all?page=${page}&page_size=${pageSize}&search_string=${search}&status=${status}&order_by=${orderBy}`,
-      {
+        
+{
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -36,6 +38,7 @@ const fetchProjects = async ({
     );
 
     const result = await response.json();
+    console.log("API Response:", result);//hy
     return result?.data?.records ?? [];
   } catch (error) {
     console.error("Fetch error:", error);
@@ -43,12 +46,13 @@ const fetchProjects = async ({
   }
 };
 const ProjectTable = () => {
+  const[popupMessage,setPopupMessage]=useState("");
   const [selectedProject, setSelectedProject] = useState(null);
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(12);
   const [search, setSearch] = useState("");
   const [status, setStatus] = useState("true");
-  const [orderBy, setOrderBy] = useState("created_at:asc");
+  const [orderBy, setOrderBy] = useState("created_at:desc");
   const navigate = useNavigate();
 
   const {
@@ -71,8 +75,22 @@ const ProjectTable = () => {
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error loading data.</p>;
+  useEffect(()=>{
+    const message=localStorage.getItem("ProjectSuccessMsg");
+    if(message){
+      setPopupMessage(message);
+      localStorage.removeItem("ProjectSuccessMsg");
+    }
+  },[]);
 
   return (
+    <div>
+      {popupMessage&&(
+        <div className="popup-message">
+          <p>{popupMessage}</p> 
+          </div> 
+              )}
+    
     <div className="p-6">
       <h2 className="text-2xl font-bold mb-4">Project Dashboard</h2>
 
@@ -160,19 +178,18 @@ const ProjectTable = () => {
                     View
                   </button>
                 </div>
-
                 <span
-                  className={`absolute top-4 right-4 px-2 py-1 rounded text-xs ${
-                    project.status === "true" || project.status === true
-                      ? "bg-green-500 text-white"
-                      : "bg-red-500 text-white"
-                  }`}
-                >
-                  {project.status === "true" || project.status === true
-                    ? "Active"
-                    : "Inactive"}
-                </span>
-              </div>
+  className={`absolute top-4 right-4 px-2 py-1 rounded text-xs ${
+    project.active === true || project.active === "true" || project.active === 1
+      ? "bg-green-500 text-white"
+      : "bg-red-500 text-white"
+  }`}
+>
+  {project.active === true || project.active === "true" || project.active === 1
+    ? "Active"
+    : "Inactive"}
+</span>
+     </div>
             ))
           ) : (
             <p>No projects found</p>
@@ -230,6 +247,7 @@ const ProjectTable = () => {
           onUpdate={refetch}
         />
       )}
+    </div>
     </div>
   );
 };

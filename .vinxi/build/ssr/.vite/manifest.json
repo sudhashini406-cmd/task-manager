@@ -1,8 +1,4 @@
 {
-  "C:/Users/sudhashini_enugula/Desktop/ProjectLabsquire18/app/styles/app.css": {
-    "file": "assets/app-xbMs25RY.css",
-    "src": "C:/Users/sudhashini_enugula/Desktop/ProjectLabsquire18/app/styles/app.css"
-  },
   "_EditUserForm-BVyw8kU9.js": {
     "file": "assets/EditUserForm-BVyw8kU9.js",
     "name": "EditUserForm"
@@ -11,9 +7,11 @@
     "file": "assets/GetMembers-CUvba0q7.js",
     "name": "GetMembers"
   },
-  "_SignIn-85yXu8KM.js": {
-    "file": "assets/SignIn-85yXu8KM.js",
-    "name": "SignIn"
+  "app/Components/Auth/SignIn.tsx": {
+    "file": "assets/SignIn-Cu5qWWwb.js",
+    "name": "SignIn",
+    "src": "app/Components/Auth/SignIn.tsx",
+    "isDynamicEntry": true
   },
   "app/routes/_labsquire.tsx?tsr-split=component": {
     "file": "assets/_labsquire-BspXxI4i.js",
@@ -31,7 +29,7 @@
     ]
   },
   "app/routes/_labsquire/projects/add-project.tsx?tsr-split=component": {
-    "file": "assets/add-project-NeOJyKaG.js",
+    "file": "assets/add-project-BSTVkkj9.js",
     "name": "add-project",
     "src": "app/routes/_labsquire/projects/add-project.tsx?tsr-split=component",
     "isDynamicEntry": true
@@ -55,13 +53,13 @@
     ]
   },
   "app/routes/_labsquire/projects/project-table.tsx?tsr-split=component": {
-    "file": "assets/project-table-BYbS96yg.js",
+    "file": "assets/project-table-DAGAc_5h.js",
     "name": "project-table",
     "src": "app/routes/_labsquire/projects/project-table.tsx?tsr-split=component",
     "isDynamicEntry": true
   },
   "app/routes/_labsquire/tasks/add-tasks.tsx?tsr-split=component": {
-    "file": "assets/add-tasks-DOzKJXMr.js",
+    "file": "assets/add-tasks-BR-A9cK4.js",
     "name": "add-tasks",
     "src": "app/routes/_labsquire/tasks/add-tasks.tsx?tsr-split=component",
     "isDynamicEntry": true
@@ -79,7 +77,7 @@
     "isDynamicEntry": true
   },
   "app/routes/_labsquire/users/add-user.tsx?tsr-split=component": {
-    "file": "assets/add-user-ArEn5gjQ.js",
+    "file": "assets/add-user-DNsERvEw.js",
     "name": "add-user",
     "src": "app/routes/_labsquire/users/add-user.tsx?tsr-split=component",
     "isDynamicEntry": true
@@ -109,12 +107,12 @@
     "isDynamicEntry": true
   },
   "app/routes/index.tsx?tsr-split=component": {
-    "file": "assets/index-C9-JsaFU.js",
+    "file": "assets/index-CLkRY6Q6.js",
     "name": "index",
     "src": "app/routes/index.tsx?tsr-split=component",
     "isDynamicEntry": true,
     "imports": [
-      "_SignIn-85yXu8KM.js"
+      "app/Components/Auth/SignIn.tsx"
     ]
   },
   "app/routes/reset-password.tsx?tsr-split=component": {
@@ -124,12 +122,12 @@
     "isDynamicEntry": true
   },
   "app/routes/sign-in.tsx?tsr-split=component": {
-    "file": "assets/sign-in-CoK22Hzi.js",
+    "file": "assets/sign-in-CYbt0mOZ.js",
     "name": "sign-in",
     "src": "app/routes/sign-in.tsx?tsr-split=component",
     "isDynamicEntry": true,
-    "imports": [
-      "_SignIn-85yXu8KM.js"
+    "dynamicImports": [
+      "app/Components/Auth/SignIn.tsx"
     ]
   },
   "virtual:$vinxi/handler/ssr": {
@@ -155,8 +153,8 @@
       "app/routes/_labsquire/projects/get-single-project/$projectId/index.tsx?tsr-split=component",
       "app/routes/_labsquire/projects/get-members/$projectId/index1.tsx?tsr-split=component"
     ],
-    "assets": [
-      "assets/app-xbMs25RY.css"
+    "css": [
+      "assets/ssr-PAw9K4Rx.css"
     ]
   }
 }
