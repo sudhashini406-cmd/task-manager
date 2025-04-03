@@ -5,6 +5,8 @@ import Cookies from "js-cookie";
 import EditProject from "./EditProject";
 import { exportToCSV } from "./ExportCsv";
 import { useNavigate } from "@tanstack/react-router";
+
+
 import { FetchProjectParams } from "../../lib/interface/Types";
 
 const PAGE_SIZES = [12, 25, 50, 100, 250, 500];
@@ -75,13 +77,13 @@ const ProjectTable = () => {
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error loading data.</p>;
-  useEffect(()=>{
-    const message=localStorage.getItem("ProjectSuccessMsg");
-    if(message){
-      setPopupMessage(message);
-      localStorage.removeItem("ProjectSuccessMsg");
-    }
-  },[]);
+  // useEffect(()=>{
+  //   const message=localStorage.getItem("ProjectSuccessMsg");
+  //   if(message){
+  //     setPopupMessage(message);
+  //     localStorage.removeItem("ProjectSuccessMsg");
+  //   }
+  // },[]);
 
   return (
     <div>

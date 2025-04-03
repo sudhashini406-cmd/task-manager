@@ -21,7 +21,7 @@ const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [serverError, setServerError] = useState("");
   const navigate = useNavigate();
-  //const[isPending,setIsPending]=useState("");
+
 
   const {
     register,
@@ -31,7 +31,7 @@ const SignIn = () => {
     formState: { errors },
   } = useForm<LoginData>();
 
-  const { mutate, isPending } = useMutation({
+  const { mutate, isLoading } = useMutation({
     mutationKey: ["login"],
     mutationFn: async (data: { email: string; password: string }) => {
       if (!data.email.endsWith("@gmail.com")) {
@@ -68,7 +68,7 @@ const SignIn = () => {
         },
       });
 
-      navigate({ to: "/projects/project-table" });
+      navigate({ to: "/projects/project-table" }); 
     },
     onError: (error: any) => {
       setServerError(error.message);
@@ -162,10 +162,10 @@ const SignIn = () => {
 
           <button
             type="submit"
-            disabled={isPending}
+            disabled={isLoading}
             className="w-full p-2 bg-blue-500 text-white rounded-md hover:bg-blue-700 mt-8"
           >
-            {isPending ? "Logging in..." : "Log In"}
+            {isLoading ? "Logging in..." : "Log In"}
           </button>
         </form>
       </div>

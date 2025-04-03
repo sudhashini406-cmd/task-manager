@@ -1,0 +1,7 @@
+
+{
+    "build": {
+      "outputDirectory": ".output/public"
+    }
+  }
+  

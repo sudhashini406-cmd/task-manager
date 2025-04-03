@@ -253,7 +253,7 @@ export const UpdatePassword: React.FC = () => {
         <button
           type="submit"
           className="px-4 py-2 bg-blue-500 text-white rounded"
-          disabled={mutation.isPending}
+          disabled={mutation.isLoading}
         >
           {mutation.isPending? "Updating..." : "Update"}
         </button>

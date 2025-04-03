@@ -1,14 +1,11 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import Cookies from "js-cookie";
-//import { useReactTable, getCoreRowModel } from "@tanstack/react-table";
 import{useReactTable,getCoreRowModel}  from "@tanstack/react-table";
 import { EditUserForm } from "./EditUserForm";
 import { exportToCSV } from "./ExportCsv1";
 import { useNavigate } from "@tanstack/react-router";
-
 import React from "react";
-// import * as React from 'react';
 
 import { UserData } from "../../lib/interface/Types";
 
@@ -16,11 +13,19 @@ const fetchUsers = async ({ queryKey }: any) => {
   const [_, page, limit, statusFilter, userType, searchName, searchEmail] =
     queryKey;
   const token = Cookies.get("access_token");
+  let url = import.meta.env.VITE_API_URL +
+  `/users/status-count?page=${page}&page_size=${limit}&active=${statusFilter === "active" ? "true" : "false"}`;
 
-  let url =
-    import.meta.env.VITE_API_URL +
-    `/users/status-count?page=${page}&page_size=${limit}&active=${statusFilter === "active" ? "true" : "false"}&user_type=${userType === "user" ? "user" : "admin"}`;
+// if (userType !== "all") {
+//   url += `&user_type=${userType}`;
+// }
 
+
+  // let url =//`https://dev-api-tm.labsquire.com/v3.0/users/status-count?page=1&page_size=25&active=true`;
+  //   import.meta.env.VITE_API_URL +
+  //   `/users/status-count?page=${page}&page_size=${limit}&active=${statusFilter === "active" ? "true" : "false"}&user_type=${userType === "user" ? "user" : "admin"}`;
+  
+if (userType) url += `&user_type=${userType}`;
   if (searchName) url += `&search_string=${searchName}`;
   if (searchEmail) url += `&search_email=${searchEmail.toLowercase()}`;
 
@@ -269,9 +274,15 @@ const UserTable = () => {
           onChange={(e) => setUserType(e.target.value)}
           className="border p-2"
         >
+          
+  <option value="all">All</option>
+  <option value="user">User</option>
+  <option value="admin">Admin</option>
+</select>
+          {/* <option value="search option">Search</option>
           <option value="user">User</option>
           <option value="admin">Admin</option>
-        </select>
+        </select> */}
 
         <input
           type="text"
