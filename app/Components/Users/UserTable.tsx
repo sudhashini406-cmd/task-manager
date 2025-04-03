@@ -20,11 +20,6 @@ const fetchUsers = async ({ queryKey }: any) => {
 //   url += `&user_type=${userType}`;
 // }
 
-
-  // let url =//`https://dev-api-tm.labsquire.com/v3.0/users/status-count?page=1&page_size=25&active=true`;
-  //   import.meta.env.VITE_API_URL +
-  //   `/users/status-count?page=${page}&page_size=${limit}&active=${statusFilter === "active" ? "true" : "false"}&user_type=${userType === "user" ? "user" : "admin"}`;
-  
 if (userType) url += `&user_type=${userType}`;
   if (searchName) url += `&search_string=${searchName}`;
   if (searchEmail) url += `&search_email=${searchEmail.toLowercase()}`;

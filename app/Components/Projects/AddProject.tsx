@@ -178,10 +178,10 @@ const AddProjectForm = ({ onProjectAdded }: { onProjectAdded?: () => void }) => 
           </button>
           <button
             type="submit"
-            disabled={mutation.isPending}
+            disabled={mutation.isLoading}
             className="px-4 py-2 bg-blue-600 text-white rounded"
           >
-            {mutation.isPending ? "Adding..." : "Add Project"} 
+            {mutation.isLoading? "Adding..." : "Add Project"} 
           </button>
         </div>
       </form>

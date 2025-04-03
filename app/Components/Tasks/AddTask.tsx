@@ -26,7 +26,7 @@ const fetchProjects = async () => {
 
 const fetchTags = async () => {
   const response = await fetch(
-    "https://dev-api-tm.labsquire.com/v3.0/tasks/tags-drop-down",
+    import.meta.env.VITE_API_URL+"/tasks/tags-drop-down",
     {
       method: "GET",
       headers: {
@@ -291,9 +291,9 @@ const AddTask = () => {
           <button
             type="submit"
             className="px-4 py-2 bg-blue-500 text-white rounded"
-            disabled={mutation.isPending}
+            disabled={mutation.isLoading}
           >
-            {mutation.isPending ? "Submitting..." : "Submit"}
+            {mutation.isLoading ? "Submitting..." : "Submit"}
           </button>
         </div>
       </form>
