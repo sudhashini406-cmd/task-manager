@@ -6,23 +6,27 @@ import { EditUserForm } from "./EditUserForm";
 import { exportToCSV } from "./ExportCsv1";
 import { useNavigate } from "@tanstack/react-router";
 import React from "react";
+import Select from "react-select"
 
 import { UserData } from "../../lib/interface/Types";
 
+
 const fetchUsers = async ({ queryKey }: any) => {
-  const [_, page, limit, statusFilter, userType, searchName, searchEmail] =
-    queryKey;
+  const [_, page, limit, statusFilter, userType, searchName, searchEmail] = queryKey;
   const token = Cookies.get("access_token");
-  let url = import.meta.env.VITE_API_URL +
-  `/users/status-count?page=${page}&page_size=${limit}&active=${statusFilter === "active" ? "true" : "false"}`;
 
-// if (userType !== "all") {
-//   url += `&user_type=${userType}`;
-// }
+  // Base URL for fetching all users (default API call)
+  let url = import.meta.env.VITE_API_URL + "/users/status-count?page=${page}&page_size=${limit}&active=true";
 
-if (userType) url += `&user_type=${userType}`;
+  // If filters are applied, use the API with parameters
+  if (userType === "user" || userType === "admin") {
+    url = import.meta.env.VITE_API_URL + 
+      `/users/status-count?page=${page}&page_size=${limit}&active=${statusFilter === "active" ? "true" : "false"}`;
+
   if (searchName) url += `&search_string=${searchName}`;
   if (searchEmail) url += `&search_email=${searchEmail.toLowercase()}`;
+  }
+  
 
   const response = await fetch(url, {
     headers: { Authorization: `Bearer ${token}` },
@@ -269,15 +273,11 @@ const UserTable = () => {
           onChange={(e) => setUserType(e.target.value)}
           className="border p-2"
         >
-          
-  <option value="all">All</option>
+ 
   <option value="user">User</option>
   <option value="admin">Admin</option>
 </select>
-          {/* <option value="search option">Search</option>
-          <option value="user">User</option>
-          <option value="admin">Admin</option>
-        </select> */}
+         
 
         <input
           type="text"

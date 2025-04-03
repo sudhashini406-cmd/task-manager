@@ -1,5 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { useParams } from "@tanstack/react-router"; //to get id from url
+import { useParams } from "@tanstack/react-router"; // to get id from URL
 import { useMemo, useState } from "react";
 import {
   useReactTable,
@@ -16,6 +16,7 @@ const fetchProjectMembers = async (
   projectId: string
 ): Promise<ProjectMember[]> => {
   if (!projectId) throw new Error("Project ID is missing");
+
   const response = await fetch(
     import.meta.env.VITE_API_URL + `/projects/${projectId}/members`,
     {
@@ -28,7 +29,8 @@ const fetchProjectMembers = async (
   );
 
   if (!response.ok) {
-    throw new Error("Failed to fetch project members");
+    const errorData = await response.json();
+    throw new Error(errorData.message || "Failed to fetch project members");
   }
 
   const data = await response.json();
@@ -55,11 +57,13 @@ const deleteMember = async ({
   );
 
   if (!response.ok) {
-    throw new Error("Failed to delete member");
+    const errorData = await response.json();
+    throw new Error(errorData.message || "Failed to delete member");
   }
 
   return memberId;
 };
+
 const addMembers = async ({
   projectId,
   members,
@@ -83,7 +87,8 @@ const addMembers = async ({
   );
 
   if (!response.ok) {
-    throw new Error("Failed to add members");
+    const errorData = await response.json();
+    throw new Error(errorData.message || "Failed to add members");
   }
 
   return response.json();
@@ -93,43 +98,24 @@ export const ProjectMembers = () => {
   const { projectId } = useParams({ strict: false });
   const queryClient = useQueryClient();
   const [isSelectOpen, setIsSelectOpen] = useState(false);
-  const { data, isLoading, error } = useQuery({
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  const {
+    data,
+    isLoading,
+    error,
+  } = useQuery({
     queryKey: ["projectMembers", projectId],
-    queryFn: () => fetchProjectMembers(projectId ?? ""), //calls data from url
-    enabled: !!projectId, //runs only when we have project id
+    queryFn: () => fetchProjectMembers(projectId ?? ""),
+    enabled: !!projectId,
   });
 
   const deleteMutation = useMutation({
     mutationFn: deleteMember,
-    onMutate: async ({ memberId }) => {
-      if (!projectId) {
-        console.error("projectId is undefined"!);
-        return;
-      }
-      await queryClient.cancelQueries({
-        queryKey: ["projectMembers", projectId],
-      });
-      const previousMembers = queryClient.getQueryData([
-        "projectMembers",
-        projectId,
-      ]);
-
-      queryClient.setQueryData(["projectMembers", projectId], (oldData: any) =>
-        oldData ? oldData.filter((member: any) => member.id !== memberId) : []
-      );
-
-      return { previousMembers };
+    onError: (error: Error) => {
+      setErrorMessage(error.message);
     },
-    onError: (_error, _variables, context) => {
-      if (context?.previousMembers) {
-        queryClient.setQueryData(
-          ["projectMembers", projectId],
-          context.previousMembers
-        );
-      }
-    },
-    onSettled: () => {
-      //queryClient.invalidateQueries({})
+    onSuccess: () => {
       queryClient.invalidateQueries({
         queryKey: ["projectMembers", projectId],
       });
@@ -138,10 +124,14 @@ export const ProjectMembers = () => {
 
   const addMutation = useMutation({
     mutationFn: addMembers,
+    onError: (error: Error) => {
+      setErrorMessage(error.message);
+    },
     onSuccess: () => {
       queryClient.invalidateQueries({
         queryKey: ["projectMembers", projectId],
       });
+      setErrorMessage(null); // Clear error after successful addition
     },
   });
 
@@ -209,19 +199,22 @@ export const ProjectMembers = () => {
   });
 
   if (isLoading) return <p className="text-center text-gray-600">Loading...</p>;
-  if (error)
-    return <p className="text-center text-red-500">Error: {(error as Error).message}</p>;
-
+  
   return (
     <div className="p-6">
       <h3 className="text-xl font-semibold text-left mb-4">Project Members</h3>
+
+      {errorMessage && (
+        <p className="text-center text-red-500 mb-4">Error: {errorMessage}</p>
+      )}
 
       <button
         className="mb-4 px-4 py-2 bg-green-500 text-white rounded-md"
         onClick={() => setIsSelectOpen(!isSelectOpen)}
       >
-        {isSelectOpen ? "AddMembers" : "AddMembers"}
+        {isSelectOpen ? "Cancel" : "Add Members"}
       </button>
+
       {isSelectOpen && <SelectMembers onConfirm={handleConfirmSelection} />}
 
       <div className="overflow-x-auto">
@@ -267,3 +260,4 @@ export const ProjectMembers = () => {
 };
 
 export default ProjectMembers;
+
