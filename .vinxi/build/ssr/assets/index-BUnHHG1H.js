@@ -1,1 +1,0 @@
-import{jsx as o}from"react/jsx-runtime";import t from"./SignIn-DSG9Eidm.js";import"react";import"@tanstack/react-query";import"react-hook-form";import"@tanstack/react-router";import"js-cookie";import"@tanstack/store";import"lucide-react";const x=function(){return o(t,{})};export{x as component};
